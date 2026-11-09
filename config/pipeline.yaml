@@ -1,0 +1,152 @@
+# Machine-readable pipeline. scripts/build.py renders one kickoff file per run into kickoffs/.
+# Each stage is a list of steps. Steps run in order; the runs inside one step run IN PARALLEL.
+# gate: who must return PASS before the next stage. checkpoint: the client must approve.
+# manual: true -> the runner never runs this stage automatically; run its kickoffs one by one
+#                 (python3 scripts/run.py --run <file>) as items come out of production.
+
+stages:
+  - id: "00"
+    name: Brief
+    steps:
+      - - {agent: creative-director, mode: "Stage 0 brief intake",
+           inputs: [knowledge/kyu-brand.md, work/00-client-notes.md],
+           output: work/01-brief.md}
+    checkpoint: "Client approves the brief (checkpoint 1)"
+
+  - id: "01"
+    name: Research and strategy
+    steps:
+      - - {agent: researcher-strategist, mode: "FOCUS", params: {FOCUS: product},
+           inputs: [work/01-brief.md, knowledge/kyu-brand.md], output: work/02-research-product.md}
+        - {agent: researcher-strategist, mode: "FOCUS", params: {FOCUS: audience},
+           inputs: [work/01-brief.md, knowledge/kyu-brand.md, knowledge/comments/], output: work/02-research-audience.md}
+        - {agent: researcher-strategist, mode: "FOCUS", params: {FOCUS: competitors},
+           inputs: [work/01-brief.md, knowledge/kyu-brand.md], output: work/02-research-competitors.md}
+        - {agent: researcher-strategist, mode: "FOCUS", params: {FOCUS: library},
+           inputs: [work/01-brief.md, knowledge/library/, knowledge/hook-taxonomy.md], output: work/02-research-library.md}
+        - {agent: researcher-strategist, mode: "FOCUS", params: {FOCUS: trends},
+           inputs: [work/01-brief.md, knowledge/trends-snapshot.md, knowledge/kyu-brand.md], output: work/02-research-trends.md}
+      - - {agent: researcher-strategist, mode: "SYNTHESIS",
+           inputs: [work/01-brief.md, work/02-research-product.md, work/02-research-audience.md,
+                    work/02-research-competitors.md, work/02-research-library.md, work/02-research-trends.md],
+           output: work/02-research.md}
+    gate: creative-director reads work/02-research.md; REVISE if the insight fails its test
+
+  - id: "02"
+    name: Ideation
+    steps:
+      - - {agent: generator-a, mode: "Stage 2 ideation",
+           inputs: [work/01-brief.md, work/02-research.md, knowledge/kyu-brand.md, knowledge/hook-taxonomy.md],
+           output: work/03-concepts-A.md}
+        - {agent: generator-b, mode: "Stage 2 ideation",
+           inputs: [work/01-brief.md, work/02-research.md, knowledge/kyu-brand.md, knowledge/hook-taxonomy.md],
+           output: work/03-concepts-B.md}
+
+  - id: "03"
+    name: Tournament
+    steps:
+      - - {agent: critic, mode: "A1", params: {PERSONA: juror},
+           inputs: [work/03-concepts-A.md, work/03-concepts-B.md, work/01-brief.md, work/02-research.md],
+           output: work/04-tournament-juror.md}
+        - {agent: critic, mode: "A1", params: {PERSONA: scroller},
+           inputs: [work/03-concepts-A.md, work/03-concepts-B.md, work/01-brief.md, work/02-research.md],
+           output: work/04-tournament-scroller.md}
+        - {agent: critic, mode: "A1", params: {PERSONA: shopper},
+           inputs: [work/03-concepts-A.md, work/03-concepts-B.md, work/01-brief.md, work/02-research.md],
+           output: work/04-tournament-shopper.md}
+        - {agent: critic, mode: "A1", params: {PERSONA: brand},
+           inputs: [work/03-concepts-A.md, work/03-concepts-B.md, work/01-brief.md, work/02-research.md],
+           output: work/04-tournament-brand.md}
+      - - {agent: critic, mode: "A2",
+           inputs: [work/04-tournament-juror.md, work/04-tournament-scroller.md,
+                    work/04-tournament-shopper.md, work/04-tournament-brand.md],
+           output: work/04-tournament.md}
+
+  - id: "04"
+    name: Feasibility
+    steps:
+      - - {agent: producer, mode: "Stage 4 feasibility",
+           inputs: [work/04-tournament.md, work/01-brief.md, knowledge/tech-test.md, knowledge/kyu-brand.md],
+           output: work/05-feasibility.md}
+    gate: producer verdict for at least one concept is GO or GO WITH CHANGES
+
+  - id: "05"
+    name: Concept decision
+    steps:
+      - - {agent: creative-director, mode: "Stage 5 concept decision",
+           inputs: [work/01-brief.md, work/02-research.md, work/04-tournament.md, work/05-feasibility.md],
+           output: work/06-concept-decision.md}
+    checkpoint: "Client approves the concept (checkpoint 2); Critic dissent is shown"
+
+  - id: "06"
+    name: Characters, script, punch-up
+    steps:
+      - - {agent: writer, mode: "6a character bible",
+           inputs: [work/06-concept-decision.md, work/01-brief.md, work/02-research.md,
+                    work/05-feasibility.md, knowledge/kyu-brand.md, knowledge/tech-test.md],
+           output: work/07-characters.md}
+      - - {agent: writer, mode: "6b script + 6c punch-up", params: {VARIANT: a},
+           inputs: [work/07-characters.md, work/06-concept-decision.md, work/02-research.md, knowledge/kyu-brand.md],
+           output: work/08-script-v1-a.md}
+        - {agent: writer, mode: "6b script + 6c punch-up", params: {VARIANT: b},
+           inputs: [work/07-characters.md, work/06-concept-decision.md, work/02-research.md, knowledge/kyu-brand.md],
+           output: work/08-script-v1-b.md}
+      - - {agent: critic, mode: "B",
+           inputs: [work/07-characters.md, work/08-script-v1-a.md, work/08-script-v1-b.md,
+                    work/06-concept-decision.md, work/01-brief.md],
+           output: "append to each script file"}
+    gate: critic Mode B returns PASS on one script (loop REVISE up to 3 times; then escalate)
+
+  - id: "07"
+    name: Visual plan
+    steps:
+      - - {agent: dop, mode: "Stage 7 visual plan",
+           inputs: [work/08-script-approved.md, work/07-characters.md, work/06-concept-decision.md,
+                    work/05-feasibility.md, knowledge/tech-test.md, knowledge/kyu-brand.md],
+           output: work/09-shotlist.md}
+      - - {agent: producer, mode: "Stage 7 production plan check",
+           inputs: [work/09-shotlist.md, work/07-characters.md, knowledge/tech-test.md],
+           output: "append to work/09-shotlist.md"}
+        - {agent: qc-supervisor, mode: "Stage 7 locked QC spec",
+           inputs: [work/07-characters.md, work/08-script-approved.md, work/09-shotlist.md, knowledge/kyu-brand.md],
+           output: work/11-qc-spec.md}
+    gate: producer PASS on the production plan
+
+  - id: "08"
+    name: Production (human-driven, looped per item)
+    manual: true
+    steps:
+      - - {agent: qc-supervisor, mode: "Stage 8 lock check (character sheets, locations, product)",
+           inputs: [work/11-qc-spec.md, work/production/references/],
+           output: "append to work/12-qc-log.md"}
+      - - {agent: qc-supervisor, mode: "Stage 8 per-shot QC (repeat for every attempt)",
+           inputs: [work/11-qc-spec.md, work/09-shotlist.md, work/production/current-shot/],
+           output: "append to work/12-qc-log.md"}
+        - {agent: dop, mode: "Stage 8 prompt fix (only after a REGENERATE verdict)",
+           inputs: [work/12-qc-log.md, work/09-shotlist.md],
+           output: "append to work/12-qc-log.md"}
+      - - {agent: qc-supervisor, mode: "Stage 8 audio and Arabic text QC",
+           inputs: [work/11-qc-spec.md, work/production/edit-check/],
+           output: "append to work/12-qc-log.md"}
+
+  - id: "09"
+    name: Review
+    steps:
+      - - {agent: critic, mode: "C",
+           inputs: [work/cut/, work/08-script-approved.md],
+           output: work/10-review-critic.md}
+        - {agent: producer, mode: "Stage 9 compliance and specs",
+           inputs: [work/cut/, work/08-script-approved.md, knowledge/kyu-brand.md],
+           output: work/10-review-producer.md}
+        - {agent: qc-supervisor, mode: "Stage 9 full-film continuity pass",
+           inputs: [work/cut/, work/11-qc-spec.md],
+           output: work/10-review-qc.md}
+    checkpoint: "Client reviews the cut with the three reviews (checkpoint 3)"
+
+  - id: "10"
+    name: Final
+    steps:
+      - - {agent: creative-director, mode: "Stage 10 final approval",
+           inputs: [work/10-review-critic.md, work/10-review-producer.md, work/10-review-qc.md,
+                    work/01-brief.md, work/decision-log.md],
+           output: work/13-final.md}

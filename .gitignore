@@ -1,0 +1,7 @@
+# bake-off private files
+bakeoff/answers/
+bakeoff/blind/
+bakeoff/scores/
+# secrets
+.env
+logs/

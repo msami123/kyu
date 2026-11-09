@@ -1,0 +1,95 @@
+# Which model runs each agent instance.
+# Edit this file after the bake-off (bakeoff/results.md), then run:  python3 scripts/build.py
+#
+# provider: anthropic -> runs in Claude Code (signed in with your Claude subscription)
+#                         generated as a subagent in .claude/agents/<id>.md
+# provider: openai    -> runs in Codex CLI (signed in with your ChatGPT account)
+#                         generated as a role prompt in codex/<id>.md
+# No API keys are used anywhere.
+#
+# model (anthropic): inherit | opus | sonnet | haiku | a full model id   (inherit = your default)
+# model (openai):    default (Codex's default for your plan) or a model name Codex accepts
+
+defaults:
+  anthropic_tools: [Read, Write, Edit, Glob, Grep]
+
+agents:
+  creative-director:
+    role_file: agents/creative-director.md
+    provider: anthropic        # rule: must differ from the writer's provider (decides on work it did not write)
+    model: inherit
+    description: >-
+      Creative Director. Use for Stage 0 (brief intake), Stage 5 (concept decision), Stage 10
+      (final approval), arbitration between agents and responses to client feedback.
+
+  producer:
+    role_file: agents/producer.md
+    provider: anthropic
+    model: inherit
+    description: >-
+      Producer. Use for Stage 4 (feasibility of the top concepts), the Stage 7 production plan
+      check, and the Stage 9 compliance and specs review.
+
+  researcher-strategist:
+    role_file: agents/researcher-strategist.md
+    provider: anthropic
+    model: inherit
+    extra_tools: [WebSearch, WebFetch]
+    description: >-
+      Researcher and Strategist. Use for Stage 1: FOCUS mode (product, audience, competitors,
+      library, trends; run in parallel) and SYNTHESIS mode (research pack and strategy).
+
+  generator-a:
+    role_file: agents/generator.md
+    provider: openai
+    model: default
+    params: {INSTANCE: A, LENSES: "L1, L2, L3"}
+    description: Generator instance A (lenses L1-L3). Stage 2, in parallel with generator-b.
+
+  generator-b:
+    role_file: agents/generator.md
+    provider: anthropic
+    model: inherit
+    params: {INSTANCE: B, LENSES: "L4, L5, L6"}
+    description: >-
+      Generator instance B (lenses L4-L6). Use for Stage 2 ideation, in parallel with
+      generator-a. Never ranks its own concepts.
+
+  critic:
+    role_file: agents/critic.md
+    provider: anthropic        # rule: must differ from the writer's provider
+    model: inherit
+    description: >-
+      Critic. Use for Stage 3 tournaments (Mode A1 per persona, in parallel; Mode A2
+      aggregation), the script gate after Stage 6 (Mode B) and the cut review (Mode C).
+      Always a fresh context; never generates.
+
+  writer:
+    role_file: agents/writer.md
+    provider: openai           # decided by the bake-off; if Claude wins, set anthropic and
+    model: default     # move creative-director and critic to openai
+    description: Writer. Stage 6 character bible, script and punch-up; revisions after the script gate.
+
+  dop:
+    role_file: agents/dop.md
+    provider: openai
+    model: default
+    description: Director of Photography. Stage 7 visual plan, character-sheet prompts, shot list; Stage 8 prompt fixes.
+
+  qc-supervisor:
+    role_file: agents/qc-supervisor.md
+    provider: anthropic        # rule: must differ from the dop's provider (checks images it did not prompt)
+    model: inherit
+    description: >-
+      QC and Continuity Supervisor. Use for the Stage 7 locked QC spec, Stage 8 character-sheet,
+      reference and per-shot checks, audio and Arabic text QC, and the Stage 9 continuity pass.
+      Judges conformity, never taste.
+
+# Independence rules checked by scripts/build.py
+rules:
+  must_differ:
+    - [critic, writer]
+    - [qc-supervisor, dop]
+  should_differ:
+    - [creative-director, writer]
+    - [generator-a, generator-b]
