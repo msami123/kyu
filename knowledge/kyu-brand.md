@@ -43,3 +43,11 @@ CTA wording, logo placement, disclaimers: TO CONFIRM
 ## Data handling
 Client approval to process this brief with both Anthropic (Claude) and OpenAI (ChatGPT): TO CONFIRM
 Customer data or photos of real people included? (should be "no" for this POC): TO CONFIRM
+
+## Scoped audio-analysis permission — 2026-11-09
+- The user stated that Mohammed Omar agrees, in the request: «الان حلل صوتو و نبرتو و هوا موافق». This is a user-reported approval for the requested voice/tone analysis, not a separately inspected release document.
+- After an automatic review blocked sending audio to OpenAI, the user explicitly answered «نعم، لهذا التحليل فقط» to: «هل تسمح بإرسال صوت المقطع الأصلي لمحمد عمر (نحو 98 ثانية) إلى OpenAI لإكمال تحليل النبرة بالاستماع؟».
+- Authorized data: the audio from the supplied public YouTube video 6UnyBbimn0I, approximately 98 seconds, including excerpts needed for this analysis.
+- Authorized recipient and purpose: OpenAI, solely to analyze this recording's voice and tone in the current task.
+- This does not grant blanket processing with Anthropic, voice cloning, publication, or unrelated uploads. Other consent fields remain scoped to their own evidence.
+- Source of authorization: the user's messages in this chat on 2026-11-09. The initial blocked attempt did not transmit the audio.

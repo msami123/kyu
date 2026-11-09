@@ -25,10 +25,15 @@
 | 07-1-1-dop.md | 07 Visual plan | 1 | - | dop | openai | work/09-shotlist.md |
 | 07-2-1-producer.md | 07 Visual plan | 2 | 1 | producer | anthropic | append to work/09-shotlist.md |
 | 07-2-2-qc-supervisor.md | 07 Visual plan | 2 | 1 | qc-supervisor | anthropic | work/11-qc-spec.md |
-| 08-1-1-qc-supervisor.md | 08 Production (human-driven, looped per item) | 1 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
-| 08-2-1-qc-supervisor.md | 08 Production (human-driven, looped per item) | 2 | 1 | qc-supervisor | anthropic | append to work/12-qc-log.md |
-| 08-2-2-dop.md | 08 Production (human-driven, looped per item) | 2 | 1 | dop | openai | append to work/12-qc-log.md |
-| 08-3-1-qc-supervisor.md | 08 Production (human-driven, looped per item) | 3 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
+| 08-1-1-creative-director.md | 08 Visual approvals and production (human-driven, looped per item) | 1 | - | creative-director | anthropic | work/09-casting-approval.md |
+| 08-2-1-qc-supervisor.md | 08 Visual approvals and production (human-driven, looped per item) | 2 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
+| 08-3-1-creative-director.md | 08 Visual approvals and production (human-driven, looped per item) | 3 | - | creative-director | anthropic | work/09-quality-approval.md |
+| 08-4-1-qc-supervisor.md | 08 Visual approvals and production (human-driven, looped per item) | 4 | - | qc-supervisor | anthropic | work/11-video-readiness.md |
+| 08-5-1-qc-supervisor.md | 08 Visual approvals and production (human-driven, looped per item) | 5 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
+| 08-6-1-qc-supervisor.md | 08 Visual approvals and production (human-driven, looped per item) | 6 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
+| 08-7-1-qc-supervisor.md | 08 Visual approvals and production (human-driven, looped per item) | 7 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
+| 08-8-1-dop.md | 08 Visual approvals and production (human-driven, looped per item) | 8 | - | dop | openai | append to work/12-qc-log.md |
+| 08-9-1-qc-supervisor.md | 08 Visual approvals and production (human-driven, looped per item) | 9 | - | qc-supervisor | anthropic | append to work/12-qc-log.md |
 | 09-1-1-critic.md | 09 Review | 1 | 2 | critic | anthropic | work/10-review-critic.md |
 | 09-1-2-producer.md | 09 Review | 1 | 2 | producer | anthropic | work/10-review-producer.md |
 | 09-1-3-qc-supervisor.md | 09 Review | 1 | 2 | qc-supervisor | anthropic | work/10-review-qc.md |

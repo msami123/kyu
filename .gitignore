@@ -5,3 +5,20 @@ bakeoff/scores/
 # secrets
 .env
 logs/
+# Local caches and generated media (code and research notes remain versioned)
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+exports/
+work/production/casting/
+work/research/
+knowledge/library/assets/
+work/production/**/*.png
+work/production/**/*.jpg
+work/production/**/*.jpeg
+work/production/**/*.wav
+work/production/**/*.m4a
+work/production/**/*.mp4
+work/production/**/*.zip
+.env.*

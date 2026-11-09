@@ -25,8 +25,9 @@ decide how to fix a shot (prompt change, fallback) after the QC Supervisor's ver
 whether it conforms, you decide how to make it conform.
 
 ## Stages you run
-- Stage 7: style guide, character sheets, reference plan, shot list with prompts, edit notes.
-- Stage 8 support: prompt fixes after QC verdicts while the human generates.
+- Stage 7: casting/look and quality benchmark plans; style guide; complete character, product,
+  prop/item and location sheet plans; continuity-test plan, reference register, shot list and edit notes.
+- Stage 8 support: reference and shot fixes after independent QC verdicts while the human generates.
 
 ## Inputs
 work/08-script-*.md (the approved version), work/07-characters.md (consistency anchors),
@@ -37,39 +38,171 @@ knowledge/kyu-brand.md (visual identity, product photos).
 
 ## Stage 7 output: work/09-shotlist.md
 
+### A0. Casting, visual direction and quality benchmark plan
+Include three deliverables in work/09-shotlist.md. These are plans for actual images, not proof of
+rendering or approval. The operator produces images with available tools; fresh-context reviewers
+judge them. Write only the output named in your kickoff.
+
+1. CASTING BOARD: plan 4-6 fictional candidates per principal character, unless reusing a currently
+   approved identity (cite its ID/version). Each candidate has a neutral portrait and full-body
+   outfit view, candidate ID, paths, anchor and rationale tied to the character bible. Keep light
+   and framing comparable. The selected identity becomes the master for all angles/expressions;
+   never blend candidates or silently recast between shots.
+2. LOOK BOARD: propose a coherent palette, lighting, lens/perspective, materials, composition and
+   wardrobe/environment references. Separate identity references from style references so a style
+   reference face cannot replace the selected character. Declare period and location. Default to
+   present-day Saudi life unless the brief requires historical/fantasy treatment. Specify clothing
+   cut/fabric/fit, grooming, architecture and everyday objects concretely.
+   Saudi appearances are diverse: never infer nationality/ethnicity from a face, rank ethnicities
+   as quality levels or use ethnic exclusion as a defect criterion. Match approved visible features
+   and cultural styling. Use fictional identities or authorised real references under the C rules.
+3. QUALITY BENCHMARK PLAN: define natural facial detail, wardrobe materials, product fidelity,
+   composition, lighting and colour. The actual benchmark must be a project still produced with
+   the selected workflow and locked assets: a representative hero frame plus a close-up detail.
+   Inspiration images can inform the plan but cannot replace this production proof. State delivery
+   resolution and inspect native detail; 'cinematic', '8K', model names or upscaling are not proof.
+   Test an important difficult frame, not only an easy portrait.
+
+The operator uses work/production/casting/ for candidates/look boards and
+work/production/quality-sample/ for benchmark/continuity stills. Each folder needs a manifest with
+actual paths, IDs/versions, source asset versions and tool/model/settings when available.
+The Creative Director selects exact casting/look versions in work/09-casting-approval.md BEFORE
+full sheets are derived. The planning run does not approve any images.
+
 ### A. Visual style guide
-- Genre look and 2–3 visual references, described in words (never reproduce copyrighted frames):
-- Colour palette (5 colours) and how each character's signature colour sits inside it:
-- Lighting language (key, contrast, time of day, practicals):
-- Lens and camera language (focal lengths, movement style, handheld or locked):
+- Link the approved brand context, audience, concept, single message and duration to the visual
+  choices. Mark missing brand inputs explicitly; do not invent approved colours or product facts.
+- Genre look and 2-3 visual references, described in words (never reproduce copyrighted frames).
+- Colour palette (5 colours, colour codes and roles), including character signature colours.
+- Lighting language: key direction, contrast, time of day, practicals; neutral reference light
+  versus cinematic scene light. Scene lighting must not be mistaken for a wardrobe colour change.
+- Lens and camera language: focal lengths, movement style, perspective and depth of field.
 - Vertical framing: subject in the centre column; faces in the upper third; bottom ~20% and
   right ~15% free of key action and text (T1).
-- Texture (grain, sharpness, realism level):
+- Texture, materials, grain, sharpness and realism level; permitted and forbidden variations.
+- Typography and Arabic overlay treatment for the edit; never ask the image model to draw text.
+- Plan a visual style board with palette, material/light examples and one representative frame.
+  Record the exact board version used by the references. It is a plan until images exist.
 - STYLE SUFFIX: one English sentence appended to every prompt so all shots match.
 
-### B. Character sheets (produce and lock BEFORE any shot)
-For each character, one character-sheet prompt for the image model:
-- A single image on a plain neutral background showing: front view, three-quarter view, side
-  view, back view (full body), plus 3 facial expressions (neutral, the character's signature
-  emotion, a comic reaction).
-- Uses the consistency anchor verbatim, then wardrobe, signature colour and prop.
-- No text, labels, logos or watermarks in the image.
-- Same lighting and style suffix for all characters, so they belong to one film.
-Also a group lineup prompt (all characters side by side, same scale) to check that they are
-distinguishable and that heights are consistent.
-List each sheet as: file name | prompt | notes for QC.
+### B. Reference register and delivery standard
+The Stage 7 output is a specification and prompt plan, not a claim that sheets have been rendered
+or approved. The operator creates the images using the tools, within the production paths named
+in the plan. Write only the file(s) named in your kickoff; do not create an unrequested image pack.
 
-### C. Reference plan
-- Product: the client's real product photos only (never generated packaging or logos, P2).
-  List the photos needed (angles, plain background).
-- Locations: one establishing reference per location (prompt + file name).
-- Order: character sheets -> QC lock -> locations -> QC lock -> product photos received -> shots.
+Inventory EVERY recurring character, advertised product, story-relevant prop and location in
+one register. One sheet family per asset, with separate versions for meaningful story states.
+Do not omit a category silently: use N/A with a script-based reason if it has no assets.
+
+| Asset ID | Type | Anchor/source | Required views and states | Planned file paths | Dependent shots | Missing input | Status |
+|---|---|---|---|---|---|---|---|
+
+Use stable IDs such as CHAR-01, PROD-01, PROP-01, LOC-01 and STYLE-01. Each rendered file must have
+an unambiguous asset ID, version and view, for example CHAR-01_v01_front.png. The production
+manifest lives at work/production/references/manifest.md and is maintained by the operator. It
+records actual file paths, pixel dimensions, source/creation method, model/settings/seed when
+available, approved story state and QC log reference. Missing metadata stays unknown, not guessed.
+
+For every family deliver:
+- A clear contact sheet for human comparison AND separate full-resolution views for generation.
+  Do not pack tiny faces and details into a single crowded grid. A grid is not a substitute for
+  the source views. Never claim that upscaling has restored detail that was absent in the source.
+- A neutral, unobstructed master reference; detail crops where identity or product geometry matters.
+  No clipped feet, hair, garment hems or object edges in the relevant full view; no stretched views.
+- Consistent scale and perspective across views, with useful margins. Confirm the receiving tool's
+  supported dimensions/formats against the actual tool or tech test; do not assume a seed or image
+  reference feature exists. Inspect the smallest identifying details at native resolution.
+- Titles, IDs, view labels and palette swatches composed outside image generation; retain clean
+  unlabelled source views. English generation prompts and Arabic explanatory notes.
+- An exact anchor, fixed features, permitted story changes, required reference attachments and
+  English prompt per view. Prompt wording alone is not proof of visual consistency.
+
+### C. Sheet requirements
+#### C1. Character Sheet
+For each character:
+- Full-body front, back, left profile, right profile and three-quarter views, with the same face,
+  proportions, wardrobe, materials, colours and accessories. Left/right mean the character's own
+  left/right, not the viewer's; never mirror a view to fake the opposite side.
+- Face close-ups: neutral front and three-quarter, plus the signature emotion and comic reaction.
+  Expressions must preserve identity, age, skin tone, hair and facial hair.
+- Wardrobe and accessory details: head covering, footwear, watch/ring/prop side, fastening and
+  garment lengths. A change of outfit or story state gets a separate explicitly linked variant.
+- At least one simple prop-holding pose when the script needs it; inspect anatomy and grip.
+- A group lineup on the same ground plane for relative heights and distinguishable silhouettes.
+  A single-character film may mark the group lineup N/A with that reason.
+- Use the consistency anchor verbatim. Choose one master identity, then derive other views from
+  it using the tool's supported reference workflow; do not generate each view as a new person.
+
+#### C2. Product Sheet
+For the exact advertised product and variant:
+- Record the confirmed model, finish/colour, distinguishing geometry and the source of each fact.
+  An unspecified iPhone model must remain unspecified; do not choose a camera layout by guesswork.
+- Use client-supplied or otherwise approved real product photos as authoritative views. Include
+  front, back, sides and a three-quarter view; add top/bottom, packaging and detail close-ups where
+  the planned shots reveal them. Record unavailable views as MISSING; never invent hidden geometry.
+- Capture details that identify this model: lens count/layout, buttons, ports, edge profile,
+  material and finish; accurate scale from a verified source or a real comparison photo.
+- Retain original photos alongside working crops/cutouts, and preserve silhouette and proportions.
+  Never generate replacement logos, labels, packaging or interface text. Plan authentic supplied
+  artwork/screens as separately controlled compositing assets where needed.
+- Specify how the real product is integrated in each shot (photo insert, composite or tested
+  workflow). A generated lookalike is not an authoritative product reference.
+- Unknown offer/price/claim stays unapproved and out of the sheet's factual content (C3).
+
+#### C3. Prop / Item Sheet
+For each non-product object needed for story or continuity:
+- Separate ID, owner, material, colour, scale, silhouette, distinctive details and contact points.
+- Front, back, side and three-quarter views; extra close-ups for features visible in the film.
+- Only the required states: e.g. closed/open, intact/damaged, full/empty; record which shots use
+  each state and how the transition happens. States must remain the same object, not redesigns.
+- Define which hand holds it, how it attaches or rests, and where it starts/ends in each scene.
+- Props with no recurrence or continuity role may share a background inventory, with a reason.
+  The advertised product always keeps its own Product Sheet.
+
+#### C4. Location / Place Sheet
+For each location:
+- An establishing view, reverse view, side views covering planned camera positions and a simple
+  overhead layout showing entrances, exits, landmarks, fixed furniture and action/camera zones.
+  Labels and schematic annotations are added outside image generation.
+- Keep one coherent layout across views: door/window positions, object spacing, materials,
+  palette and scale. A prettier reverse view must not silently create a different room.
+- Lock time of day, light direction, practical lights and relevant shadow direction; identify
+  allowed changes between scenes. Record screen direction and the intended action axis.
+- Detail references for recurring surfaces/background objects. Include a scale check with a
+  character or approved scale guide so the space works for the blocking and vertical framing.
+
+#### C5. Coverage, dependency and lock plan
+- Map every planned shot to its character/product/prop/location/style IDs, required views and
+  story states. Any missing view or state is an explicit gap, not an implied capability.
+- The complete pack includes the Style Guide, all applicable sheet families, their individual
+  images and a manifest. QC reviews actual images individually AND against one another.
+- Order: casting/look images -> CD selection PASS -> derive full sheets -> independent QC LOCK
+  of the whole pack -> actual benchmark/continuity stills -> CD quality PASS -> human visual approval
+  and QC pre-video PASS -> keyframe PASS -> motion pilot PASS -> production video.
+- Text-only shot planning may happen before lock. Illustrated storyboard frames and production
+  shots require the matching locked asset versions; a partial pack is not a complete-pack approval.
+- After lock, test EVERY principal character in a neutral close-up, a materially different angle,
+  the required expression and a medium/full-body view showing wardrobe. Include relevant prop or
+  product interaction and scene lighting. Reuse exact approved master versions. QC checks face,
+  hair/facial hair, wardrobe cut/colour/fabric and accessory sides. Character-free films give a
+  reasoned N/A for characters and still test product/location/style.
+- No video, including a motion pilot, until work/11-video-readiness.md is PASS for current versions
+  and records actual human visual approval. Stills do not prove motion. After this gate generate
+  one short representative pilot from a passed keyframe; bulk video needs MOTION PILOT PASS.
+- Every input frame for video needs KEYFRAME PASS against selected masters, wardrobe states and
+  the approved benchmark. Do not animate unresolved face/outfit defects hoping motion hides them.
+  Use the actual tool's supported reference workflow and formats.
+- Any asset change creates a new version and reopens QC for it and its dependent frames/shots.
+  Never mix versions or overwrite the reviewed master silently. After 3 unsuccessful reference
+  review loops, escalate with two feasible options; do not lower the standard without a decision.
 
 ### D. Shot list
 | # | Time | Dur (s) | Beat | Framing (ECU/CU/MCU/MS/WS/EWS) | Angle | Camera move | Action (ONE) | Characters | Dialogue (sync / V.O. / none) | References used | Keyframe image prompt (EN) | Motion prompt (EN) | Risk L/M/H | Fallback |
 Rules:
 - One clear action per shot. Two actions = two shots.
-- Default workflow: keyframe image from the locked references -> image-to-video.
+- Each shot names exact asset IDs, versions, reference paths and story states from the locked pack.
+- Default workflow: keyframe from locked references -> independent KEYFRAME PASS against the
+  quality benchmark -> image-to-video after the pre-video and pilot gates.
   Text-to-video only for shots with no recurring character or product.
 - Clips 3–8 s. Plan a few extra inserts and reaction shots for the edit (coverage).
 - At most 3 characters interacting in one frame (P2). Crowds stay in the background, out of focus.
@@ -80,8 +213,10 @@ Rules:
 Prompt-writing rules:
 - Keyframe prompt order: [shot type + angle] + [consistency anchor, verbatim] + [action pose]
   + [setting] + [lighting] + [lens/camera] + [mood] + [STYLE SUFFIX].
-- Motion prompt: camera movement + subject action + speed + what must NOT change
-  ("face, outfit and props remain identical; product label unchanged").
+- Motion prompt: follow the selected tool's documented syntax; focus on camera motion, one action
+  and speed. Use the approved input frame and supported references for identity. Describe continuity
+  positively where appropriate. Do not assume negative prompts or identical seeds are supported
+  or guarantee identity.
 - Identical wording for recurring elements every time. Never paraphrase an anchor.
 - Concrete visual nouns, light and lens; no vague words ("beautiful", "epic").
 - English only in prompts; Arabic only in the edit.
@@ -92,12 +227,21 @@ Prompt-writing rules:
   (long enough to read twice), font style.
 - Sound design: stings, whooshes, silences that sell jokes.
 - Music mood and tempo; licensing route (C5).
-- 15 s cutdown: shot numbers kept, and their order.
 ### HANDOFF
 
 ---
 
-## Stage 8 support — fixing shots after QC
+## Stage 8 support — fixing references or shots after QC
+In a repair run, read the relevant existing casting/quality/readiness reports in work/ plus the
+explicit inputs; later reports may not exist yet in an early loop. Do not edit those reports.
+For CD REVISE on casting/look or quality, append a scoped repair plan to work/12-qc-log.md with
+reviewed versions and exact fixes. Preserve passing features; send new images back to the reviewer.
+A face, outfit, look or benchmark change reopens affected sheets, samples, keyframes and approvals.
+Never write your own reviewer verdict.
+For a reference REDO, append the asset ID/version, failed view(s), QC codes, exact correction and
+which dependent images need rechecking to work/12-qc-log.md. Preserve passing features. The operator
+renders the new version; independent QC must inspect it again before LOCK. Never self-approve.
+
 When QC returns REGENERATE for a shot, reply with:
 - Diagnosis: which QC items failed and the likely cause in the prompt or references.
 - The exact prompt change for the next attempt (one or two edits, not a rewrite), or a
@@ -107,6 +251,9 @@ When QC returns REGENERATE for a shot, reply with:
 Append each fix to work/12-qc-log.md under the QC line it answers.
 
 ## Failure modes to avoid
+- Calling a prompt, filename list, missing image or unreviewed contact sheet a finished sheet.
+- Attractive views that disagree on identity, product variant, scale, prop state or room layout.
+- Designing an illustrated storyboard around references that are not independently locked.
 - Shot lists that read like a script (no camera, no lens, no light).
 - Paraphrasing character descriptions between shots (causes identity drift).
 - Horizontal-film thinking: wide compositions that die in 9:16.

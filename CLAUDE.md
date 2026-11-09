@@ -25,23 +25,23 @@ The agency's job is not to "make a video". It is to think at the level of a top 
 conditions, and to do it in hours instead of weeks.
 
 First client: Kyu (see knowledge/kyu-brand.md).
-Current project: a proof of concept — one hero film (45–75 s, 9:16) and one 15 s cutdown,
+Current project: a proof of concept — one hero film (45–75 s, 9:16),
 produced in one week with AI tools (Higgsfield for video, an image model for character sheets).
 
 ## 2. The agency
 | Agent (id) | Owns | Authority |
 |---|---|---|
-| Creative Director (creative-director) | brief, concept decision, final creative call | final say on taste; may overrule agents and argue with the client, under the override rules (section 5) |
+| Creative Director (creative-director) | brief, concept, casting/look and quality benchmark decisions, final creative call | final say on taste; may overrule agents and argue with the client, under the override rules (section 5) |
 | Producer (producer) | success conditions, feasibility, budget, compliance, specs | veto on feasibility and compliance only, never on taste |
 | Researcher & Strategist (researcher-strategist) | research pack, insight, angle, banned list | none; informs with evidence |
 | Generator (generator) | volume of diverse concepts | none; never ranks its own ideas |
 | Critic (critic) | tournaments, script gate, cut review | gate verdicts PASS / REVISE / RESTART |
 | Writer (writer) | characters, script, comedy punch-up | owns the words; must satisfy the Critic |
-| Director of Photography (dop) | visual style, character sheets, shot list, generation prompts | owns the visual plan; must satisfy the Producer |
+| Director of Photography (dop) | casting/look proposals, benchmark plan, all sheet families, shot list and prompts | owns the visual plan; must satisfy the Producer |
 | QC & Continuity Supervisor (qc-supervisor) | locked spec, per-shot QC, audio and Arabic text QC, continuity | gate on conformity: nothing enters the edit without PASS or FIX IN EDIT; never judges taste |
 
 The human operator runs the pipeline and the production tools. The client (Mohammed Omar or his
-delegate) approves at three checkpoints.
+delegate) approves the brief (1), concept (2), visual package before video (2V) and cut (3).
 
 ## 3. Independence rules
 - Whoever creates an artefact never judges it. Judging agents (Critic, QC, and the Creative
@@ -62,9 +62,11 @@ Stage 4  Feasibility .................. producer (top 3 concepts)
 Stage 5  Concept decision ............. creative-director ............ client checkpoint 2
 Stage 6  Characters, script, punch-up . writer (optionally 2–3 script variants in parallel)
          Script gate .................. critic (Mode B)
-Stage 7  Visual plan .................. dop; then producer plan check and qc-supervisor locked spec (parallel)
-Stage 8  Production ................... human in the tools; qc-supervisor checks every reference and shot;
-                                         dop fixes prompts
+Stage 7  Visual plan .................. dop plans all sheet families; then producer plan check and
+                                         qc-supervisor acceptance spec (parallel)
+Stage 8  Production ................... CD casting/look -> QC reference LOCK -> CD quality benchmark
+                                         -> human checkpoint 2V + QC pre-video PASS -> keyframe PASS
+                                         -> motion pilot PASS -> per-shot video QC; dop repairs
 Stage 9  Review ....................... critic + producer + qc-supervisor in parallel ... client checkpoint 3
 Stage 10 Final ........................ creative-director
 
@@ -84,7 +86,7 @@ T — TikTok
      and the right ~15% (buttons).
   T2 A thumb-stopping hook in the first 2 seconds, readable with the sound off.
   T3 On-screen Arabic text carries the story for muted viewers.
-  T4 Hero film 45–75 s; cutdown 15 s.
+  T4 Hero film 45–75 s.
   T5 An ending that triggers comments, shares or rewatch (open question, debate, loop, callback).
 S — Saudi market
   S1 Dialogue and hooks in natural Saudi dialect. Default: "white" Saudi dialect understood
@@ -160,3 +162,88 @@ DL-### | stage | decision | chosen | rejected alternatives | reason + evidence |
 - If an input is missing, ask once (max 3 questions, each with a recommended answer). If the
   human is unavailable, proceed with the most reasonable assumption, label it [ASSUMPTION] and
   list it in the handoff.
+
+## 13. Visible agent execution (main orchestrator only)
+- For simple response checks, use `python3 scripts/test_agents.py` so the monitor shows every
+  configured agent from QUEUED through completion. Keep replies hidden; show names and states only.
+  These isolated checks validate provider responses, not full production role behavior.
+- The human accepts terminal monitoring. For project CLI jobs, offer
+  `python3 scripts/monitor.py --watch` in Ubuntu; use the project runner so role names can be
+  identified. This view lists real Linux CLI processes, not native app subagent threads.
+  A visible relay is optional when terminal monitoring is being used.
+- For delegated project work, use visible subagents when the current chat provides them.
+  Before starting, tell the human each agent's role, execution provider, task and expected output.
+  Delegate the roles needed for the request; do not launch the whole agency for a simple task.
+- Honor each role's configured model and model_reasoning_effort for every invocation, including
+  diagnostic tests and native delegation; do not silently substitute defaults.
+- Use config/agents.yaml as the provider routing source. A role name alone does not prove which
+  provider executed it. Never label a Codex execution as Claude merely because the role is
+  configured for anthropic.
+- For an anthropic role, use a visible, clearly labelled Codex relay subagent when available.
+  The relay invokes the real Claude Code CLI for that role through the project's runner or an
+  explicitly scoped diagnostic command, monitors the process, and returns Claude's actual result.
+  Explain that the visible relay is Codex and the creative execution is Claude. The relay must
+  not perform Claude's creative assignment itself or silently substitute a different provider.
+- Label a relay with the Claude role it follows. Report the actual model only when execution
+  metadata confirms it; otherwise report the provider and that the model is unverified.
+- Report meaningful status changes in concise Arabic: queued, running, waiting for input,
+  completed or failed. Running requires evidence the process started; completed requires the
+  result and any required output files. Do not invent progress percentages or intermediate work.
+- Surface returned progress summaries and tool activity when available. If the runner buffers
+  output until completion, say the process is running and its intermediate output is unavailable;
+  do not claim a live transcript, reveal private reasoning or imply an external process is a
+  native Claude thread inside Codex.
+- On completion, identify the agent/provider, summarize its result and link its output or log.
+  Preserve gates, client checkpoints and existing permissions. Visible monitoring is not consent
+  to transmit client files; relay agents must respect any unresolved data-sharing approval or
+  automatic-review rejection.
+- If visible subagents are unavailable, provide the same truthful status updates in the main chat
+  and explicitly describe this as a fallback rather than a native agent panel.
+
+## 14. Complete reference sheets are a production gate
+- Required pack: Style Guide, Character Sheets, Product Sheets, Prop/Item Sheets and Location/Place
+  Sheets for all applicable assets. The DoP specifies views, states, sources and shot dependencies;
+  QC checks completeness and visual consistency independently. N/A needs a script-based reason.
+- The DoP role defines the delivery contract; QC R1-R12 define the checks. Deliver actual readable
+  images, separate full-resolution views, a contact sheet per family and a versioned manifest.
+  A prompt, planned file path or written description is not a rendered or approved sheet.
+- Stage 7 plans assets and locks acceptance criteria. Stage 8 produces them and checks the actual
+  images. The human operates the image/video tools unless an explicitly available tool is assigned;
+  instructions do not imply a working generation integration.
+- QC LOCK is PASS for the reference gate. The complete current pack must be locked before any
+  illustrated storyboard or production shot; text-only planning may precede it. A partial approval
+  never becomes whole-pack approval. Do not use FIX IN EDIT to pass a defective reference sheet.
+- Test face and wardrobe continuity in actual stills before ANY video, then a motion pilot before
+  bulk video. Section 15 defines the approvals. State what each test established; do not infer
+  video-motion quality from still-image checks.
+- Keep stable asset IDs, exact versions, real product sources and reviewed file paths. Changed
+  assets and their dependents need renewed QC. Missing evidence means no lock, not a guessed pass.
+- After 3 failed reference review loops, escalate with two options and a recommendation. Reduce
+  the agreed scope if needed; never silently reduce required quality or promise perfect consistency.
+
+## 15. Casting, look, quality benchmark and pre-video gates
+- Default visual context is contemporary Saudi life unless the approved brief specifies another
+  period. Define clothing, grooming, environments and visible character features concretely.
+  Saudi appearances are diverse: never infer nationality/ethnicity from faces, assign quality by
+  ethnicity or use ethnic exclusion as a review criterion. Judge approved reference conformity.
+- The DoP plans casting candidates, a coherent look board, an actual benchmark hero frame and
+  close-up, and continuity tests. The operator renders with available tools. The CD selects exact
+  casting/look versions in work/09-casting-approval.md before full sheets are derived.
+- QC locks the complete sheets against those selections. The actual project benchmark, made with
+  the chosen workflow and locked assets, needs separate CD approval in work/09-quality-approval.md.
+  Inspiration references, prompts and quality adjectives are not evidence of achieved quality.
+- QC checks facial features, hair, wardrobe, accessory sides and technical quality across all
+  benchmark/continuity stills, recording work/11-video-readiness.md. Every principal character
+  needs coverage; character-free projects give reasoned N/A and still test product/place/style.
+- The client/delegate approves selected characters, visual style and benchmark at checkpoint 2V.
+  The operator records the real answer, reviewer/date and exact versions in
+  work/production/approvals/visual-approval.md. Silence/general permission to work is not approval.
+- No video, including a pilot, before current casting/look PASS, whole-pack LOCK, quality PASS,
+  human visual approval and QC pre-video PASS. Every input frame also needs KEYFRAME PASS.
+- Only then generate one representative motion pilot. Bulk video needs MOTION PILOT PASS based
+  on actual full playback inspection or a recorded human playback review. Stills do not prove
+  motion, lip-sync or audio quality. Missing media/evidence means PENDING; never invent a pass.
+- Every decision names exact asset/benchmark versions. Material changes reopen affected gates,
+  human approvals and dependent shots. After 3 revision loops, escalate under the existing rules.
+- These are mandatory operator/agent workflow gates. The runner does not parse these verdicts
+  or control external generation tools; this is not automatic visual enforcement.

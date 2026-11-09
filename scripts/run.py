@@ -22,6 +22,8 @@ Before the first run:  claude auth login    and    codex login   (sign in with C
 from __future__ import annotations
 
 import argparse
+import os
+import signal
 import shutil
 import subprocess
 import sys
@@ -32,6 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import ROOT, BuildError, load_yaml  # noqa: E402
+from run_state import RunState  # noqa: E402
 
 LOGS = ROOT / "logs"
 DEFAULT_MODELS = {None, "", "inherit", "default"}
@@ -49,6 +52,8 @@ class Run:
     extra_tools: list
     output: str
     manual: bool
+    reasoning_effort: str | None = None
+    task: str = ''
 
     @property
     def checks_file(self) -> bool:
@@ -74,7 +79,11 @@ def load_runs() -> tuple[list[Run], dict]:
                     name=f"{sid}-{si}-{ri}-{r['agent']}.md", stage=sid, stage_name=stage["name"],
                     step=si, agent=r["agent"], provider=a["provider"], model=a.get("model"),
                     extra_tools=a.get("extra_tools", []), output=str(r.get("output", "")),
-                    manual=bool(stage.get("manual"))))
+                    manual=bool(stage.get("manual")),
+                    reasoning_effort=a.get("model_reasoning_effort"),
+                    task=str(r.get('mode', stage['name'])) +
+                         (" / " + ", ".join(f'{k}={v}' for k, v in r['params'].items())
+                          if r.get('params') else '')))
     return runs, {s["id"]: s for s in pipeline["stages"]}
 
 
@@ -97,13 +106,17 @@ def command_for(run: Run, kickoff: str) -> tuple[list[str], str | None]:
             "-o", str(LOGS / f"{run.name[:-3]}.last.md")]
     if run.model not in DEFAULT_MODELS:
         argv += ["-m", run.model]
+    if run.reasoning_effort is not None:
+        argv += ["-c", f'model_reasoning_effort="{run.reasoning_effort}"']
     argv.append("-")  # read the prompt from stdin
     return argv, prompt
 
 
-def execute(run: Run, dry: bool, timeout: int) -> tuple[Run, str]:
+def execute(run: Run, dry: bool, timeout: int, state: RunState | None = None) -> tuple[Run, str]:
     kickoff_path = ROOT / "kickoffs" / run.name
     if not kickoff_path.exists():
+        if state:
+            state.finish('FAILED', reason='kickoff missing')
         return run, "ERROR kickoff missing (run scripts/build.py)"
     argv, stdin_text = command_for(run, kickoff_path.read_text(encoding="utf-8"))
     tool = "Claude Code" if run.provider == "anthropic" else "Codex"
@@ -115,23 +128,58 @@ def execute(run: Run, dry: bool, timeout: int) -> tuple[Run, str]:
     LOGS.mkdir(exist_ok=True)
     log = LOGS / f"{run.name[:-3]}.log"
     started = time.time()
+    state = state or RunState(run)
+    proc = None
+    def stop_child():
+        if proc is None or proc.poll() is not None:
+            return
+        try:
+            os.killpg(proc.pid, signal.SIGTERM)
+            proc.wait(timeout=2)
+        except subprocess.TimeoutExpired:
+            os.killpg(proc.pid, signal.SIGKILL)
+            proc.wait()
+        except ProcessLookupError:
+            pass
     try:
-        proc = subprocess.run(argv, input=stdin_text, cwd=ROOT, capture_output=True,
-                              text=True, encoding="utf-8", timeout=timeout)
+        proc = subprocess.Popen(argv, cwd=ROOT, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE, text=True, encoding='utf-8',
+                                start_new_session=True)
+        state.started(proc.pid)
+        stdout, stderr = proc.communicate(input=stdin_text, timeout=timeout)
+        state.update(status='FINALIZING')
         log.write_text(f"$ {argv[0]} … (exit {proc.returncode})\n\n--- stdout ---\n"
-                       f"{proc.stdout}\n--- stderr ---\n{proc.stderr}", encoding="utf-8")
+                       f"{stdout}\n--- stderr ---\n{stderr}", encoding="utf-8")
         code = proc.returncode
     except subprocess.TimeoutExpired:
+        stop_child()
+        proc.communicate()
         log.write_text(f"timeout after {timeout}s", encoding="utf-8")
+        state.finish('TIMEOUT', reason='time limit reached')
         return run, f"FAIL timeout after {timeout}s (log: {log.relative_to(ROOT)})"
+    except KeyboardInterrupt:
+        stop_child()
+        if proc is not None:
+            proc.communicate()
+        state.finish('CANCELLED', reason='operator interrupted run')
+        raise
+    except OSError as exc:
+        stop_child()
+        if proc is not None:
+            proc.communicate()
+        state.finish('FAILED', reason=type(exc).__name__)
+        return run, f"FAIL could not start or record {tool}: {exc}"
     secs = int(time.time() - started)
     if code != 0:
+        state.finish('FAILED', exit_code=code, reason='CLI returned an error')
         return run, f"FAIL exit {code} after {secs}s (log: {log.relative_to(ROOT)})"
     if run.checks_file:
         out = ROOT / run.output
         if not out.exists() or out.stat().st_mtime < started or out.stat().st_size == 0:
+            state.finish('FAILED', exit_code=code, reason='required output not written')
             return run, (f"FAIL finished but did not write {run.output} "
                          f"(log: {log.relative_to(ROOT)})")
+    state.finish('COMPLETED', exit_code=code, reason='CLI finished; required output checks passed')
     return run, f"OK   {run.output}  [{tool}, {secs}s]"
 
 
@@ -143,9 +191,10 @@ def run_batch(batch: list[Run], args) -> bool:
     if not todo:
         return True
     print(f"\n▶ {len(todo)} run(s) in parallel: {', '.join(r.agent for r in todo)}")
+    states = {r.name: RunState(r) for r in todo} if not args.dry_run else {}
     ok = True
     with ThreadPoolExecutor(max_workers=max(1, args.parallel)) as pool:
-        for run, msg in pool.map(lambda r: execute(r, args.dry_run, args.timeout), todo):
+        for run, msg in pool.map(lambda r: execute(r, args.dry_run, args.timeout, states.get(r.name)), todo):
             print(f"  {run.name}: {msg}")
             ok &= not msg.startswith(("FAIL", "ERROR"))
     return ok

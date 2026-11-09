@@ -34,6 +34,7 @@ except ImportError:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parent.parent
 PROVIDERS = {"anthropic", "openai"}
+OPENAI_REASONING_EFFORTS = {"none", "minimal", "low", "medium", "high", "xhigh", "max", "ultra"}
 # work/ files the human creates (not produced by any agent run)
 HUMAN_FILES = {"work/00-client-notes.md", "work/08-script-approved.md", "work/decision-log.md",
                "work/12-qc-log.md"}
@@ -81,6 +82,12 @@ def validate(agents_cfg: dict, pipeline: dict) -> list[str]:
             errors.append(f"{aid}: role_file not found: {a.get('role_file')}")
         if not a.get("description"):
             errors.append(f"{aid}: description is required (Claude Code uses it to delegate)")
+        effort = a.get("model_reasoning_effort")
+        if effort is not None:
+            if a.get("provider") != "openai":
+                errors.append(f"{aid}: model_reasoning_effort is only supported for openai agents")
+            elif not isinstance(effort, str) or effort not in OPENAI_REASONING_EFFORTS:
+                errors.append(f"{aid}: invalid model_reasoning_effort: {effort!r}")
 
     rules = agents_cfg.get("rules", {})
     for level, bucket in (("must_differ", errors), ("should_differ", warnings)):

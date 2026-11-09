@@ -9,6 +9,7 @@
 #
 # model (anthropic): inherit | opus | sonnet | haiku | a full model id   (inherit = your default)
 # model (openai):    default (Codex's default for your plan) or a model name Codex accepts
+# model_reasoning_effort (openai): none | minimal | low | medium | high | xhigh | max | ultra
 
 defaults:
   anthropic_tools: [Read, Write, Edit, Glob, Grep]
@@ -19,8 +20,8 @@ agents:
     provider: anthropic        # rule: must differ from the writer's provider (decides on work it did not write)
     model: inherit
     description: >-
-      Creative Director. Use for Stage 0 (brief intake), Stage 5 (concept decision), Stage 10
-      (final approval), arbitration between agents and responses to client feedback.
+      Creative Director. Use for Stage 0 brief intake, Stage 5 concept decision, Stage 8 casting/look
+      and quality benchmark approval, Stage 10 final approval, arbitration and client feedback.
 
   producer:
     role_file: agents/producer.md
@@ -42,7 +43,8 @@ agents:
   generator-a:
     role_file: agents/generator.md
     provider: openai
-    model: default
+    model: gpt-6-astra
+    model_reasoning_effort: xhigh
     params: {INSTANCE: A, LENSES: "L1, L2, L3"}
     description: Generator instance A (lenses L1-L3). Stage 2, in parallel with generator-b.
 
@@ -66,23 +68,26 @@ agents:
 
   writer:
     role_file: agents/writer.md
-    provider: openai           # decided by the bake-off; if Claude wins, set anthropic and
-    model: default     # move creative-director and critic to openai
+    provider: openai           # if Claude wins the bake-off, move this role to anthropic
+                               # and move creative-director and critic to openai
+    model: gpt-6-astra
+    model_reasoning_effort: xhigh
     description: Writer. Stage 6 character bible, script and punch-up; revisions after the script gate.
 
   dop:
     role_file: agents/dop.md
     provider: openai
-    model: default
-    description: Director of Photography. Stage 7 visual plan, character-sheet prompts, shot list; Stage 8 prompt fixes.
+    model: gpt-6-astra
+    model_reasoning_effort: xhigh
+    description: Director of Photography. Stage 7 casting/look and quality benchmark plans, all sheet families and shot list; Stage 8 visual/reference/shot repairs.
 
   qc-supervisor:
     role_file: agents/qc-supervisor.md
     provider: anthropic        # rule: must differ from the dop's provider (checks images it did not prompt)
     model: inherit
     description: >-
-      QC and Continuity Supervisor. Use for the Stage 7 locked QC spec, Stage 8 character-sheet,
-      reference and per-shot checks, audio and Arabic text QC, and the Stage 9 continuity pass.
+      QC and Continuity Supervisor. Use for the Stage 7 acceptance spec, Stage 8 sheet-pack lock,
+      pre-video face/wardrobe checks, keyframe and motion-pilot gates, shot/audio/text QC and Stage 9 continuity.
       Judges conformity, never taste.
 
 # Independence rules checked by scripts/build.py

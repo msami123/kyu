@@ -15,3 +15,7 @@ Rules:
   one sentence.
 - Mark works that use real people's faces or third-party IP in section 14; the pattern can
   transfer, the faces and IP never do.
+
+## Added research packs
+
+- [2026-11-09 — six video sources, character/location/product sheets and audio archive](INDEX-2026-11-09.md). Research only; not a production/QC lock.

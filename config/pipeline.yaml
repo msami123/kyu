@@ -113,17 +113,44 @@ stages:
     gate: producer PASS on the production plan
 
   - id: "08"
-    name: Production (human-driven, looped per item)
+    name: Visual approvals and production (human-driven, looped per item)
     manual: true
+    gate: "No video before casting/look PASS, whole-pack LOCK, quality PASS, human visual approval 2V and QC pre-video PASS; each input needs KEYFRAME PASS; bulk video needs MOTION PILOT PASS"
     steps:
-      - - {agent: qc-supervisor, mode: "Stage 8 lock check (character sheets, locations, product)",
-           inputs: [work/11-qc-spec.md, work/production/references/],
+      - - {agent: creative-director, mode: "Stage 8A casting and visual direction approval (actual images required)",
+           inputs: [work/01-brief.md, work/07-characters.md, work/08-script-approved.md,
+                    work/09-shotlist.md, knowledge/kyu-brand.md, work/production/casting/],
+           output: work/09-casting-approval.md}
+      - - {agent: qc-supervisor, mode: "Stage 8 complete sheet-pack lock after casting/look PASS",
+           inputs: [work/11-qc-spec.md, work/09-shotlist.md, work/09-casting-approval.md,
+                    knowledge/kyu-brand.md, work/production/references/],
            output: "append to work/12-qc-log.md"}
-      - - {agent: qc-supervisor, mode: "Stage 8 per-shot QC (repeat for every attempt)",
-           inputs: [work/11-qc-spec.md, work/09-shotlist.md, work/production/current-shot/],
+      - - {agent: creative-director, mode: "Stage 8B quality benchmark approval (actual project stills; request human checkpoint 2V)",
+           inputs: [work/01-brief.md, work/09-shotlist.md, work/09-casting-approval.md,
+                    work/12-qc-log.md, work/production/references/, work/production/quality-sample/],
+           output: work/09-quality-approval.md}
+      - - {agent: qc-supervisor, mode: "Stage 8 pre-video readiness: face/wardrobe consistency, benchmark and actual human approval",
+           inputs: [work/11-qc-spec.md, work/09-shotlist.md, work/09-casting-approval.md,
+                    work/09-quality-approval.md, work/12-qc-log.md, work/production/references/,
+                    work/production/quality-sample/, work/production/approvals/],
+           output: work/11-video-readiness.md}
+      - - {agent: qc-supervisor, mode: "Stage 8 per-shot keyframe QC BEFORE motion (pilot and every later shot)",
+           inputs: [work/11-qc-spec.md, work/11-video-readiness.md, work/09-shotlist.md,
+                    work/09-casting-approval.md, work/09-quality-approval.md, work/12-qc-log.md,
+                    work/production/references/, work/production/quality-sample/, work/production/current-shot/],
            output: "append to work/12-qc-log.md"}
-        - {agent: dop, mode: "Stage 8 prompt fix (only after a REGENERATE verdict)",
-           inputs: [work/12-qc-log.md, work/09-shotlist.md],
+      - - {agent: qc-supervisor, mode: "Stage 8 motion-pilot review AFTER pre-video and keyframe PASS (full playback evidence required)",
+           inputs: [work/11-qc-spec.md, work/11-video-readiness.md, work/09-shotlist.md,
+                    work/09-casting-approval.md, work/09-quality-approval.md, work/12-qc-log.md,
+                    work/production/references/, work/production/quality-sample/, work/production/motion-pilot/],
+           output: "append to work/12-qc-log.md"}
+      - - {agent: qc-supervisor, mode: "Stage 8 per-shot video QC AFTER passed keyframe and pilot (repeat for every attempt)",
+           inputs: [work/11-qc-spec.md, work/11-video-readiness.md, work/09-shotlist.md,
+                    work/09-casting-approval.md, work/09-quality-approval.md, work/12-qc-log.md,
+                    work/production/references/, work/production/quality-sample/, work/production/current-shot/],
+           output: "append to work/12-qc-log.md"}
+      - - {agent: dop, mode: "Stage 8 visual/reference/shot repair (only after review failure; separately from reviewers, then rerun the affected gate)",
+           inputs: [work/09-shotlist.md, work/11-qc-spec.md, work/12-qc-log.md, work/production/repair-request/],
            output: "append to work/12-qc-log.md"}
       - - {agent: qc-supervisor, mode: "Stage 8 audio and Arabic text QC",
            inputs: [work/11-qc-spec.md, work/production/edit-check/],
@@ -139,7 +166,8 @@ stages:
            inputs: [work/cut/, work/08-script-approved.md, knowledge/kyu-brand.md],
            output: work/10-review-producer.md}
         - {agent: qc-supervisor, mode: "Stage 9 full-film continuity pass",
-           inputs: [work/cut/, work/11-qc-spec.md],
+           inputs: [work/cut/, work/11-qc-spec.md, work/11-video-readiness.md, work/09-quality-approval.md,
+                    work/production/references/, work/production/quality-sample/],
            output: work/10-review-qc.md}
     checkpoint: "Client reviews the cut with the three reviews (checkpoint 3)"
 

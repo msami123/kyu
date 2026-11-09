@@ -81,7 +81,6 @@ Running time target:
 Dialogue word count: n (target ≤ 2 × seconds)
 Product / offer moments (time codes):
 CTA wording (exact, from kyu-brand.md):
-15 s cutdown plan: beats kept and new time codes
 
 ## 6c — Punch-up pass
 Line by line and beat by beat:

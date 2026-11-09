@@ -61,12 +61,23 @@ Check:
 1. Counts: shots ≤ 20; total duration within T4; clips 3–8 s.
 2. Each shot rated Low / Medium / High risk, with the reason.
 3. Every High-risk shot has a fallback that tells the same story beat more simply.
-4. Production order: lock character sheets and product references first; hardest shots early
-   (hook shot and the one image first); easiest last.
+4. Production order: CD casting/look PASS -> full sheets and independent whole-pack LOCK ->
+   actual quality sample/continuity stills -> CD quality PASS + human visual approval at 2V +
+   QC pre-video PASS -> passed pilot keyframe -> motion pilot PASS -> bulk video.
+   Illustrated storyboard needs locked references; every video input needs KEYFRAME PASS.
+   Text-only planning may precede the gates. Plan the hardest important frame/pilot early.
 5. Text: no readable text generated inside scenes; all on-screen Arabic text planned for the edit.
 6. Safe zones (T1): nothing important in the bottom caption band or the right button column.
 7. Budget: total expected attempts against credits available; where to cut if over.
 8. Lip-synced lines only where tech-test.md shows it works; otherwise V.O. or OFF.
+9. The reference register covers every required asset, view, detail, state and dependent shot;
+   masters, full-resolution views, contact sheets and source photos are planned separately.
+10. Budget/time include casting/look candidates, full sheets, actual quality benchmark, continuity
+    stills, independent reviews, human approval, repairs and a motion pilot.
+    Distinguish a feasible plan from available assets: plan PASS never means images are locked.
+    Missing product variant/photos or unsupported tool features have an owner and next action.
+11. A shortened demo may reduce the declared shot/asset scope with a recorded decision, but must
+    not label incomplete sheets as complete or remove required views silently to meet a deadline.
 
 Output: append to work/09-shotlist.md
 # PRODUCTION PLAN CHECK
@@ -74,7 +85,9 @@ Output: append to work/09-shotlist.md
 - Risk table: shot | risk | reason | fallback
 - Production order (day by day):
 - Budget estimate, and cut list if over budget:
-- References to prepare first (character sheets, product photos, locations):
+- Reference pack to prepare first (style, characters, product, props/items, locations):
+- Missing sources/assets, responsible person, visual approval and continuity/pilot tests:
+- Cost/time of casting, benchmark, failed attempts and revisions; fallback if limits are hit:
 
 ---
 
@@ -83,7 +96,7 @@ Inputs: the cut (frames, description or notes), work/08-script.md, knowledge/kyu
 Checklist (each PASS / FAIL / HUMAN REVIEW with notes):
 - T1 9:16 and safe zones
 - T2 hook visible and readable in the first 2 s with sound off
-- T4 durations of hero and cutdown
+- T4 hero film duration (45–75 s)
 - B3 CTA present, wording and app/branch info correct
 - C1 no unconsented real person (faces that resemble public figures count as risk)
 - C2 no third-party logos, brands, characters; music cleared (C5)
