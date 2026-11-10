@@ -22,3 +22,6 @@ work/production/**/*.m4a
 work/production/**/*.mp4
 work/production/**/*.zip
 .env.*
+
+# Arabic originals kept before the English translation
+.backup-arabic-originals-2026-11-09/

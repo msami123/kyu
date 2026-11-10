@@ -1,76 +1,76 @@
-# لا تقلب الصفحة حتى تقرأ السطر الاخير 🔥🔥🔥 #كيو #عروض #اكسبلور #جديد #ترند
+# لا تقلب الصفحة حتى تقرأ السطر الاخير 🔥🔥🔥 #كيو #عروض #اكسبلور #جديد #ترند ("Don't turn the page until you read the last line 🔥🔥🔥 #Kyu #Offers #Explore #New #Trend")
 
-تاريخ البحث: 2026-11-09. مراجعة بصرية لإطارات من ملف الفيديو بمعدل صورة كل ثانية؛ ليست مشاهدة حركة مستمرة أو استماعًا. توقيت صفحات المراجعة تقريبي بفارق نحو نصف ثانية.
+Research date: 2026-11-09. Visual review of frames from the video file at one frame per second; not continuous motion viewing or listening. Timings on the review sheets are approximate, to within about half a second.
 
 ## 1. CARD
 
-المصدر: [محمد عمر | كيو](https://www.youtube.com/watch?v=6UnyBbimn0I). تاريخ النشر بحسب بيانات يوتيوب: 20251126. المدة: 98 ثانية. المنصة: YouTube. القطاع: تجزئة / محتوى قناة العلامة. صفة الإعلان المدفوع غير مثبتة. الأداء النسبي والاحتفاظ: غير متاحين.
+Source: [محمد عمر | كيو](https://www.youtube.com/watch?v=6UnyBbimn0I) ("Mohammed Omar | Kyu"). Publish date per YouTube metadata: 20251126. Duration: 98 seconds. Platform: YouTube. Sector: retail / brand channel content. Paid-ad status not confirmed. Relative performance and retention: not available.
 
-الأدلة المحلية: `work/research/2026-11-09-youtube/6UnyBbimn0I/source.mp4`، `source.info.json`، `frames/`، `review-*.jpg`، `source-audio.m4a`. [LIB:library-kyu-white-friday.md#card]
+Local evidence: `work/research/2026-11-09-youtube/6UnyBbimn0I/source.mp4`, `source.info.json`, `frames/`, `review-*.jpg`, `source-audio.m4a`. [LIB:library-kyu-white-friday.md#card]
 
 ## 2. THE IDEA IN ONE SENTENCE
 
-مقدّم يقلب معنى لافتة تنفي العروض، ثم يكشف تباعًا مجموعات منتجات وأسعارًا على أرض المحل.
+A presenter flips the meaning of a sign that denies there are offers, then reveals, one after another, groups of products and prices on the store floor.
 
 ## 3. HOOK (0–3 s)
 
-مرئي: مقدم بثوب أبيض أمام واجهة كيو ولافتة كبيرة، يتجه إلى الكاميرا. النص يقدّم تناقضًا حول عروض الجمعة البيضاء. H05 أساسي؛ H04 ثانوي. القناة: صورة ونص؛ الانفعال المستهدف: الفضول. المسموع: لم يُفحص؛ التفريغ الآلي متاح.
+Visual: a presenter in a white thobe in front of the Kyu storefront and a large sign, moving toward the camera. The text sets up a contradiction about the White Friday offers. H05 primary; H04 secondary. Channel: image and text; target emotion: curiosity. Audio: not examined; an automatic transcript is available.
 
 ## 4. TIME STRUCTURE
 
-| الزمن التقريبي | الحدث | الوظيفة |
+| Approximate time | Event | Function |
 |---|---|---|
-| 0–6 | الواجهة واللافتة | تناقض ثم وعد بالكشف |
-| 6–17 | منظفات على طاولات حمراء ومجموعة هدايا | برهان بصري للحزمة |
-| 17–39 | معلبات وألبان ومنظفات ودقيق | تكرار عرض ثم سعر |
-| 39–56 | مشروبات وسناك وربط بالديوانية | تخصيص اجتماعي |
-| 56–68 | كراتين حلوى وفتح عبوة | تكبير الكمية وإثباتها |
-| 68–80 | مشروبات وذرة وعناية | إعادة تنشيط الاهتمام |
-| 80–98 | أغذية مجمدة وطبق تقديم | استمرار العروض حتى النهاية |
+| 0–6 | Storefront and sign | Contradiction, then a promise of a reveal |
+| 6–17 | Cleaning products on red tables and a gift set | Visual proof of the bundle |
+| 17–39 | Canned goods, dairy, cleaning products and flour | Repeated offer, then price |
+| 39–56 | Drinks and snacks, tied to the diwaniya | Social personalization |
+| 56–68 | Cartons of sweets and opening a pack | Amplifying the quantity and proving it |
+| 68–80 | Drinks, corn and personal care | Re-activating interest |
+| 80–98 | Frozen foods and a serving dish | Offers continue to the very end |
 
 ## 5. STRATEGY
 
-[ASSUMPTION] يخاطب مشتريًا يقارن القيمة والكمية. الزاوية: وفرة محسوسة داخل المحل. المنتج هو محور الكلام والفعل، والمقدّم رابط بين الأقسام. ليست رسالة واحدة بسيطة، بل نشرة عروض متعددة.
+[ASSUMPTION] It addresses a shopper who compares value and quantity. The angle: tangible abundance inside the store. The product is the focus of the talk and the action, and the presenter is the link between sections. It is not a single simple message but a multi-offer bulletin.
 
 ## 6. CHARACTERS
 
-الشخصية التي سمّاها المستخدم محمد عمر: ثوب أبيض، شعر قصير داكن، شارب ظاهر، ميكروفون دائري على الصدر، إشارة بالسبابة ورفع المنتج قرب العدسة. لا يُستنتج عمر أو طول أو طبع شخصي من الصورة. المبالغة هنا في العرض والأداء، لا تشخيص للشخص.
+The character the user named as Mohammed Omar: white thobe, short dark hair, visible mustache, a round lapel microphone on the chest, pointing with the index finger and holding the product up close to the lens. No age, height or personal temperament is inferred from the image. The exaggeration here is in the presentation and performance, not a characterization of the person.
 
 ## 7. CREATIVE MECHANISM
 
-عكس التوقع ثم كشف متكرر. اللقطة القابلة للنقل: شخص أمام جدار منتجات، ثم تقريب الكمية إلى المشاهد. لا تُنسخ العبوات أو العبارات كهوية جديدة.
+Reversing expectations, then repeated reveals. The transferable shot: a person in front of a wall of products, then bringing the quantity close to the viewer. The packaging or phrases are not copied as a new identity.
 
 ## 8. COMEDY AND EMOTION
 
-الأداء بصريًا نشط؛ فتح الكف، العد بالأصابع، التقرب من العدسة، وابتسامة ضمن مقطع الديوانية. كثافة النكات غير محسوبة. [ASSUMPTION] القرب والحركة يدعمان الألفة.
+The performance is visually energetic: an open palm, counting on the fingers, moving close to the lens, and a smile during the diwaniya segment. Joke density not counted. [ASSUMPTION] The closeness and movement support familiarity.
 
 ## 9. CRAFT
 
-عمودي 9:16؛ انتقال من كامل الجسم إلى متوسط وقريب؛ منظور واسع وتشوه نسبي عند الاقتراب. خلفيات سلع متكررة، سقف مكشوف وإضاءة خطية. كتابة بيضاء محددة بالأسود، وأرقام صفراء كبيرة ومقارنات حمراء. الصوت محفوظ ولم يُستمع إليه. النصوص عربية محكية؛ التفريغ الآلي يخطئ في الكسور والأسعار.
+Vertical 9:16; moves from full body to medium and close; wide perspective with relative distortion when getting close. Backgrounds of repeated goods, exposed ceiling and linear lighting. White text with a black outline, large yellow numbers and red comparisons. Audio saved but not listened to. The texts are in spoken (colloquial) Arabic; the automatic transcript makes errors in fractions and prices.
 
 ## 10. ENDING AND ENGAGEMENT
 
-ينتهي بعرض غذائي إضافي؛ لا تظهر في الإطارات النهائية بطاقة تطبيق أو CTA مستقلة. تجنب اختراع خاتمة أو دعوة غير موجودة.
+It ends on an additional food offer; no app card or standalone CTA appears in the final frames. Avoid inventing an ending or a call to action that does not exist.
 
 ## 11. ASSESSMENT
 
-لا توجد بيانات احتفاظ أو خط أساس لأداء القناة، لذلك لا حكم بأنه نجح. [ASSUMPTION] عناصر قوة محتملة: التناقض؛ الكمية المرئية؛ قرب المقدم. المخاطر: ازدحام الرسائل والأسعار وامتداد 98 ثانية؛ أطول من T4 للمشروع.
+There is no retention data or baseline for channel performance, so no judgment that it succeeded. [ASSUMPTION] Possible strengths: the contradiction; the visible quantity; the presenter's closeness. Risks: crowded messages and prices, and the 98-second length; longer than the project's T4.
 
 ## 12. WHAT TRANSFERS
 
-النمط: ادعاء افتتاحي غير متوقع ← كشف محسوس ← دليل باليد ← قيمة واضحة. ينقل إلى عرض واحد معتمد في كيو؛ لا تنقل أسعار 2025 أو شروط الاسترجاع إلى إعلان جديد.
+The pattern: an unexpected opening claim → a tangible reveal → proof in hand → clear value. Transfer it to a single approved offer at Kyu; do not carry 2025 prices or return conditions into a new ad.
 
 ## 13. AI PRODUCTION FEASIBILITY
 
-المتوسط والقريب سهلان نسبيًا؛ التفاعل الدقيق باليد وقراءة العبوات يحتاجان صور منتجات حقيقية وتركيبًا. لم يختبر هذا البحث التوليد أو مزامنة الشفاه. لا يعد إثباتًا لـP4.
+Medium and close shots are relatively easy; precise hand interaction and readable packaging need real product photos and compositing. This research did not test generation or lip sync. It does not count as proof of P4.
 
 ## 14. COMPLIANCE
 
-وجه شخص حقيقي بحسب سياق المستخدم وعبوات علامات متعددة. C1 وC2 وC3: البحث ليس إذن استعمال إعلاني؛ الموافقة على الوجه والصوت في ملف العلامة غير محسومة. الأسعار تاريخية وليست عرضًا نافذًا.
+A real person's face, according to the user's context, and packaging from multiple brands. C1, C2 and C3: the research is not permission for advertising use; consent for the face and voice is unresolved in the brand file. Prices are historical and not a current offer.
 
 ### HANDOFF
-- Stage completed: إدخال مرجع بحثي؛ لا PASS إنتاجي.
+- Stage completed: research reference intake; no production PASS.
 - Output file(s) written: `knowledge/library/library-kyu-white-friday.md`.
-- Next agent and what they need from this output: الباحث/الكاتب/مدير التصوير؛ الرجوع للصور المؤقتة وربط أي اقتباس بالمصدر.
-- Open questions for the human (max 3, each with a recommended answer): لا سؤال مطلوب لاستعمال التحليل الداخلي؛ اعتماد العروض والحقوق منفصل قبل الإنتاج.
-- Decision log lines added: DL-008 (قرار مشترك لحزمة البحث).
+- Next agent and what they need from this output: researcher/writer/director of photography; refer back to the temporary images and link any quotation to its source.
+- Open questions for the human (max 3, each with a recommended answer): no question needed to use the internal analysis; approval of offers and rights is separate, before production.
+- Decision log lines added: DL-008 (shared decision for the research package).

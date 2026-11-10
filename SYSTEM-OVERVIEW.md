@@ -1,71 +1,82 @@
-# Kyu Creative Studio — خريطة النظام
+# Kyu Creative Studio — System Map
 
-آخر مراجعة للحالة: **9 نوفمبر 2026**.
+Status below reflects the current local project-file inventory.
 
-مرجع يوضح الفريق والمكتبات ومدخلات كل مشروع. الأدوار أدناه تصف مسؤوليات الإيجنتس ومخرجاتهم المطلوبة؛ لا تعني أن هذه المخرجات أُنتجت بالفعل. تُحدّث الحالة عند إضافة بيانات أو اختبار مراحل جديدة.
+A reference that explains the team, the libraries and each project's inputs. The roles below describe the agents' responsibilities and their required outputs; they do not mean these outputs have actually been produced. The status is updated when data is added or new stages are tested.
 
-## 1. جدول الإيجنتس
+## 1. Agents table
 
-الفريق الحالي فيه **9 إيجنتس، موزّعون على 8 أدوار**؛ توليد الأفكار له إيجنتان يعملان بشكل مستقل.
+The current team has **9 agents, spread across 8 roles**; idea generation has two agents working independently.
 
-| الإيجنت | يعمل عبر | مسؤوليته | ماذا يسلّم؟ |
+| Agent | Runs via | Responsibility | What does it deliver? |
 |---|---|---|---|
-| **المدير الإبداعي** | Claude Code | يفهم الطلب ويختار الفكرة والشخصيات ويعتمد الأسلوب وعينة الجودة | الموجز وقرارات الفكرة والكاستينغ والاعتماد البصري |
-| **الباحث والاستراتيجي** | Claude Code | يدرس البراند والسوق والجمهور والمنافسين والترندات | بحث موثّق ورسالة تسويقية واضحة |
-| **مولّد الأفكار A** | Codex CLI | يولّد أفكارًا من زوايا إبداعية محددة | مجموعة أفكار متنوعة |
-| **مولّد الأفكار B** | Claude Code | يولّد أفكارًا مستقلة بزوايا أخرى | مجموعة ثانية لتوسيع الخيارات |
-| **الناقد** | Claude Code | يقارن الأفكار ويراجع السيناريو والنسخة | تقييم، ملاحظات، وقبول أو طلب تعديل |
-| **المنتج** | Claude Code | يفحص قابلية التنفيذ والوقت والتكلفة والقيود | خطة تنفيذ ومخاطر وبدائل |
-| **الكاتب** | Codex CLI | يطوّر الشخصيات والهوك والحوار وتسلسل الأحداث | السيناريو والنصوص الإعلانية |
-| **مدير التصوير والتخطيط البصري** | Codex CLI | يحدد الشكل البصري ومواصفات الشيتات واللقطات | دليل بصري، مواصفات الشيتات، قائمة لقطات وبرومبتات |
-| **مراجع الجودة والاستمرارية** | Claude Code | يفحص الشيتات وثبات الملامح واللبس قبل الفيديو ثم إطار اللقطة والحركة | تقرير جاهزية الفيديو وقرارات اعتماد أو إعادة تصحيح |
+| **Creative Director** | Claude Code | Understands the request, chooses the idea and the characters, approves the style and the quality sample | The brief, and the idea, casting and visual-approval decisions |
+| **Researcher & Strategist** | Claude Code | Studies the brand, the market, the audience, the competitors and the trends | Documented research and a clear marketing message |
+| **Idea Generator A** | Codex CLI | Generates ideas from specific creative angles | A varied set of ideas |
+| **Idea Generator B** | Claude Code | Generates independent ideas from other angles | A second set to widen the options |
+| **Critic** | Claude Code | Compares the ideas and reviews the script and the cut | Evaluation, notes, and acceptance or a request for changes |
+| **Producer** | Claude Code | Checks feasibility, time, cost and constraints | An execution plan, risks and alternatives |
+| **Writer** | Codex CLI | Develops the characters, the hook, the dialogue and the sequence of events | The script and the ad copy |
+| **Director of Photography & Visual Planning** | Codex CLI | Defines the visual look and the specifications of the sheets and shots | A visual guide, sheet specifications, a shot list and prompts |
+| **Quality & Continuity Reviewer** | Claude Code | Checks the sheets and the consistency of faces and wardrobe before video, then the shot frame and the motion | A video-readiness report and decisions to approve or re-correct |
 
-توزيع الأدوار والمزوّدين مضبوط في [إعدادات الفريق](config/agents.yaml)، والتسلسل موضح في [دليل مراحل العمل](PIPELINE.md).
+The assignment of roles and providers is set in the [team settings](config/agents.yaml), and the sequence is explained in the [pipeline guide](PIPELINE.md).
 
-## 2. جدول المكتبات
+## 2. Libraries table
 
-المكتبات هي المعرفة التي يرجع إليها الفريق قبل اتخاذ قراراته. حالتها المسجلة أدناه هي الحالة الفعلية وقت آخر مراجعة.
+The libraries are the knowledge the team refers to before making its decisions. The status recorded below is the actual status at the time of the last review.
 
-| المكتبة | ماذا تحتوي عند اكتمالها؟ | لماذا يحتاجها الفريق؟ | الموجود حاليًا |
+| Library | What does it contain when complete? | Why does the team need it? | What exists now |
 |---|---|---|---|
-| **الهوكات** | هوكات، تصنيفات، أسباب النجاح وأرقام موثّقة | اختيار افتتاحية مناسبة | تصنيف لـ15 نوعًا ومعايير قياس؛ دون أمثلة موثّقة مكتملة |
-| **الترندات** | أصوات وصيغ وهاشتاغات وتحديات، مع تاريخ الرصد والمصادر | معرفة ما هو مناسب الآن | قالب فارغ؛ دون تحديث تلقائي |
-| **الحمض النووي للأفكار** | تشريح الفرضية والشخصيات والتصاعد والنكتة واللقطة المشاركة والنهاية | فهم البنية الإبداعية القابلة للاستفادة | قالب تشريح؛ المكتبة غير معبّأة بتحليلات أعمال فعلية |
-| **رؤى الجمهور** | احتياجات واعتراضات وعبارات من التعليقات والتقييمات | بناء فكرة تتصل بحياة الجمهور | تعليمات بحث؛ دون بنك بيانات متراكم |
-| **التقويم الثقافي** | مناسبات ومواسم ورواتب وأحداث قادمة، بمواعيد ومصادر موثّقة | اختيار التوقيت والسياق | خانات غير معبّأة |
-| **الأداء الخاص** | نتائج أعمالنا مرتبطة بالفكرة والهوك والتنفيذ | تحسين القرارات بناءً على تجربتنا | غير مبني بعد |
+| **Hooks** | Hooks, classifications, reasons for success and documented numbers | Choosing a suitable opening | A taxonomy of 15 types, illustrative examples and measurement criteria; hook observations in the six video deconstructions, but no measured performance bank |
+| **Trends** | Sounds, formats, hashtags and challenges, with the observation date and sources | Knowing what fits right now | An empty template; no automatic updates |
+| **Idea DNA** | Breakdown of the premise, characters, escalation, joke, shareable shot and ending | Understanding the reusable creative structure | Six video deconstructions (five Kyu Shorts and the Ballon d'Or reference), plus a deeper character/comedy craft study; two additional Kyu 11/11 teasers analysed in the local research folder |
+| **Audience Insights** | Needs, objections and phrases from comments and reviews | Building an idea that connects with the audience's life | Research instructions; no accumulated data bank |
+| **Cultural Calendar** | Occasions, seasons, paydays and upcoming events, with documented dates and sources | Choosing the timing and context | The general 90-day calendar is empty; Kyu's 11/11 campaign context is documented in the brand file and teaser analysis |
+| **Own Performance** | Results of our work linked to the idea, the hook and the execution | Improving decisions based on our experience | Not built yet |
 
-المراجع الحالية: [تصنيف الهوكات](knowledge/hook-taxonomy.md)، [قالب الترندات](knowledge/trends-snapshot.md)، [قالب تشريح الأعمال](knowledge/deconstruction-template.md)، [مجلد المكتبة](knowledge/library/README.md)، [ملف العلامة](knowledge/kyu-brand.md)، و[تعليمات الباحث](agents/researcher-strategist.md).
+Current references: [hook taxonomy](knowledge/hook-taxonomy.md), [trends template](knowledge/trends-snapshot.md), [work breakdown template](knowledge/deconstruction-template.md), [library folder](knowledge/library/README.md), [brand file](knowledge/kyu-brand.md), and [researcher instructions](agents/researcher-strategist.md).
 
-وجود قالب لا يعني وجود بيانات. كل رقم أو اقتباس أو ترند يحتاج مصدرًا وتاريخًا، والمعلومة غير المؤكدة تُذكر بوصفها افتراضًا أو نقصًا.
+Having a template does not mean having data. Every number, quote or trend needs a source and a date, and unconfirmed information is stated as an assumption or a gap.
 
-## 3. جدول مدخلات المشروع
+### Supporting knowledge and project records
 
-تأتي المدخلات من العميل، ثم يستكمل الفريق ما يحتاجه بالبحث. يمكن البدء بالمعلومات المتاحة وتسجيل النواقص؛ العروض والأسعار والادعاءات تحتاج تأكيدًا قبل استخدامها.
+The six categories above are a planned knowledge taxonomy, not six independent databases. The project also has:
 
-| المدخل | ماذا نحتاج فيه؟ | ماذا يؤثر فيه؟ |
+- **Brand knowledge:** `knowledge/kyu-brand.md` records confirmed/scoped information and open fields. It includes project consent and Kyu's teaser claims; the exact iPhone price, gift details, offer terms and many core brand fields remain unconfirmed.
+- **Visual and character research:** `knowledge/library/library-kyu-visual-character-place-audio.md` and the asset manifest organise six original character frames, location/product boards and source provenance. Generated character-sheet candidates v01/v02 are in `work/production/casting/`; independent Claude reviews are in `work/reviews/`. These are separate from production approval.
+- **Audio research:** `knowledge/library/library-mohammed-omar-voice-analysis.md` contains signal measurements and four excerpts, with no completed listening/tone review. The later client-request clip has a local automatic transcript and frame-based request analysis; it is not a voice-performance test.
+- **Technical tests:** `knowledge/tech-test.md` still contains unfilled test tables. Creating stills and reviewing them does not establish Saudi lip-sync or motion quality.
+- **Client request and working brief:** `work/00-client-notes.md`, `work/client-request-analysis.md` and draft `work/01-brief.md`. These are project inputs and proposals rather than general creative-library examples.
+- **Detailed local evidence:** `work/research/` holds downloaded sources, extracted frames, transcripts and the two iPhone teaser analyses. Most media and this research folder are excluded from Git; not everything local is available in a GitHub clone.
+
+## 3. Project inputs table
+
+Inputs come from the client, then the team fills in what it needs through research. Work can start with the available information while recording the gaps; offers, prices and claims need confirmation before they are used.
+
+| Input | What do we need in it? | What does it affect? |
 |---|---|---|
-| **العلامة التجارية** | نشاطها، شخصيتها، قيمها وهويتها البصرية | نبرة الإعلان وشكله |
-| **المنتج أو الخدمة** | ما نعلن عنه، صوره وميزاته المؤكدة | محور القصة وطريقة إظهار المنتج |
-| **الهدف** | شراء، زيارة، تحميل، تعريف أو تذكّر | الرسالة والدعوة إلى الإجراء |
-| **الجمهور** | من نخاطب، أين يعيش، وما احتياجاته؟ | الفكرة واللغة والهوك |
-| **العرض والرسالة** | السعر والشروط إن وجدت، وأهم شيء نريد إيصاله | الوعد الإعلاني |
-| **الذوق والحدود** | مراجع تعجب العميل، وما يريد تجنّبه | الاتجاه الإبداعي |
-| **ظروف التنفيذ** | المنصة، المدة، الموعد والميزانية | حجم الفكرة وخطة الإنتاج |
-| **معيار النجاح** | كيف سنحكم على التجربة؟ وما النتائج المتاحة لاحقًا؟ | التقييم وتغذية سجل الأداء |
+| **Brand** | Its business, personality, values and visual identity | The ad's tone and look |
+| **Product or service** | What we're advertising, its images and confirmed features | The story's focus and how the product is shown |
+| **Objective** | Purchase, visit, download, awareness or recall | The message and the call to action |
+| **Audience** | Who we're addressing, where they live, and what they need | The idea, the language and the hook |
+| **Offer and message** | The price and terms if any, and the most important thing we want to get across | The advertising promise |
+| **Taste and boundaries** | References the client likes, and what they want to avoid | The creative direction |
+| **Execution conditions** | Platform, duration, deadline and budget | The size of the idea and the production plan |
+| **Success criterion** | How will we judge the test? And what results will be available later? | The evaluation and feeding the performance log |
 
-يُسجّل كلام العميل في [ملاحظات العميل](work/00-client-notes.md)، وتُثبّت معلومات العلامة المؤكدة في [ملف العلامة](knowledge/kyu-brand.md).
+The client's words are recorded in [client notes](work/00-client-notes.md), and confirmed brand information is pinned in the [brand file](knowledge/kyu-brand.md).
 
-## 4. كيف ترتبط الأجزاء؟
+## 4. How do the parts connect?
 
-**طلب العميل ← بحث ← أفكار ومراجعة ← اختيار الفكرة ← سيناريو ← اختيار الشخصيات والشكل البصري ← الشيتات واعتمادها ← عينة الجودة وموافقة العميل وفحص الثبات ← ستوريبورد وإطار معتمد ← اختبار حركة ← إنتاج ومراجعة.**
+**Client request ← research ← ideas and review ← idea selection ← script ← choosing characters and the visual look ← sheets and their approval ← quality sample, client approval and consistency check ← storyboard and approved frame ← motion test ← production and review.**
 
-- يعتمد العميل الموجز والفكرة، ثم الشخصيات والأسلوب وعينة الجودة في نقطة اعتماد بصري 2V قبل الفيديو، ثم النسخة المعروضة.
-- يخطط مدير التصوير لشيتات الشخصيات والمنتج والأغراض والمكان والأسلوب البصري. تُنتج الصور بالأدوات ويُراجعها إيجنت مستقل؛ كتابة البرومبت وحدها لا تعني اكتمال الشيت.
-- يحتاج الستوريبورد المصوّر إلى اعتماد حزمة المراجع كاملة. قبل أي فيديو تُفحص الملامح والشعر وقصة الملابس وألوانها وخاماتها والإكسسوارات في زوايا وتعابير مختلفة، وتُعتمد عينة جودة فعلية. ثم يُفحص إطار كل لقطة قبل تحريكه، ويُراجع اختبار حركة قبل بقية الفيديوهات.
-- المراجعة تقيس المطابقة للمراجع المعتمدة والمظهر المعاصر المطلوب؛ لا تستنتج الجنسية أو العِرق من الوجه. البوابات تعليمات تشغيلية للمشغّل والإيجنتس، وليست منعًا آليًا داخل أدوات التوليد.
-- عند بناء سجل الأداء، تُعاد نتائج النشر إلى البحث وتطوير الأفكار؛ هذه الحلقة غير منفّذة حاليًا.
+- The client approves the brief and the idea, then the characters, the style and the quality sample at a 2V visual-approval point before video, then the cut that is shown.
+- The director of photography plans the sheets for the characters, the product, the props, the location and the visual style. The images are produced with the tools and reviewed by an independent agent; writing the prompt alone does not mean the sheet is complete.
+- The illustrated storyboard needs the full reference package to be approved. Before any video, the faces, hair, the cut, colors and fabrics of the clothes, and the accessories are checked across different angles and expressions, and an actual quality sample is approved. Then each shot's frame is checked before it is animated, and a motion test is reviewed before the rest of the videos.
+- The review measures conformity to the approved references and the required contemporary look; it does not infer nationality or ethnicity from the face. The gates are operating instructions for the runner and the agents, not an automatic block inside the generation tools.
+- When the performance log is built, publishing results are fed back into research and idea development; this loop is not currently implemented.
 
-## 5. الحالة الحالية وحدود التشغيل
+## 5. Current status and operating limits
 
-تعليمات الفريق والمشغّل موجودان، ونجحت اختبارات الاستجابة المعزولة للإيجنتس. لم تُختبر دورة إنتاج إعلان كاملة بعد. المكتبات تحتاج تعبئة، وتشغيل أدوات الصور والفيديو ومراجعة النتائج يجريان بخطوات مستقلة؛ الربط الآلي الكامل بين مراحل الإنتاج غير منفّذ حاليًا.
+The team's instructions and the runner exist, and the agents' isolated response tests passed. A full ad production cycle has not been tested yet. The libraries need filling, and running the image and video tools and reviewing the results are done as separate steps; full automatic linking between the production stages is not currently implemented.

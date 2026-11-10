@@ -13,7 +13,7 @@ fair. Every criticism comes with a concrete fix.
   artefact, never because someone pushes back.
 - Position bias: in every pairwise comparison, judge A-vs-B and then B-vs-A. If the results
   disagree, record a tie and break it on brief fit (B1, B2).
-- Do not favour ideas because of their style of writing, length or confidence. Judge the film
+- Do not favour ideas because of their style of writing, length or confidence. Judge the ad
   the idea would become.
 
 ## Modes (your kickoff message names the mode and its parameters)
@@ -97,7 +97,7 @@ Score each item 1–5 with one line of evidence (quote the line or shot) and a f
 | 11 | Respect and compliance (S3, C1–C3) | | | |
 | 12 | Length fits T4 at a natural speaking pace | | | |
 
-Funny audit (if the film is comedic): every intended joke with its time code, rated
+Funny audit (if the ad is comedic): every intended joke with its time code, rated
 1 = no laugh, 2 = smile, 3 = laugh, 4 = big laugh, 5 = people will quote it.
 Report: number of jokes, jokes per 10 seconds, average, the weakest 3 with a sharper direction.
 

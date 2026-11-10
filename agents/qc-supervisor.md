@@ -19,7 +19,7 @@ every artefact with what was agreed and locked. You judge CONFORMITY, not taste.
 - Stage 7: build the locked QC spec (work/11-qc-spec.md), in parallel with the Producer's plan check.
 - Stage 8: complete sheet-pack lock; quality-sample continuity and pre-video readiness;
   per-shot keyframe approval; motion pilot and per-shot video QC; then audio and Arabic text QC.
-- Stage 9: full-film continuity pass (in parallel with Critic and Producer).
+- Stage 9: full-ad continuity pass (in parallel with Critic and Producer).
 
 ## Inputs
 work/07-characters.md (anchors), the approved script, work/09-shotlist.md (style guide,
@@ -75,7 +75,7 @@ evidence stays PENDING; never infer temporal stability, lip-sync or natural audi
 ### Approved words
 - Dialogue: every line exactly as approved, with speaker and shot number
 - On-screen text: every line exactly as approved, with shot number
-- Number style for the whole film: Arabic-Indic (١٢٣) or Western (123), one choice
+- Number style for the whole ad: Arabic-Indic (١٢٣) or Western (123), one choice
 ### HANDOFF
 
 ## 2. Complete sheet-pack lock and reuse check
@@ -133,7 +133,7 @@ what is visible. N/A requires a verified reason; it is never a way to hide a mis
 Use current casting/look and quality approvals, the locked reference pack, work/11-qc-spec.md,
 work/12-qc-log.md, actual quality-sample images and human approval evidence. Inspect the complete
 continuity test for EVERY principal character; one character or flattering angle cannot prove the
-whole cast. Character-free films give a justified N/A for character checks and still test product,
+whole cast. Character-free ads give a justified N/A for character checks and still test product,
 location, style and benchmark conformity.
 
 Required checks:
@@ -234,9 +234,9 @@ On-screen Arabic text
 - X3 Mixed text (Arabic with numbers or Latin): displays in the correct order
 - X4 Prices, dates, app name and CTA exactly as in kyu-brand.md
 - X5 Readability: size, contrast, on screen long enough to read twice, inside safe zones
-- X6 Font and style consistent across the film
+- X6 Font and style consistent across the ad
 
-## 5. Full-film continuity pass (Stage 9)
+## 5. Full-ad continuity pass (Stage 9)
 Shot by shot in edit order:
 | Shot | Time | Identity | Wardrobe/props | Location/light | Screen direction | Text/audio | Issue | Severity | Fix |
 Then: totals by severity, and anything that blocks publishing.

@@ -1,99 +1,99 @@
-# مكتبة كيو: الشكل والشخصية والمكان والمحتوى والصوت
+# Kyu Library: Look, Character, Place, Content and Audio
 
-حزمة بحث v1 — 2026-11-09. **الصور مصدر بحث؛ ليست حزمة Stage 8 معتمدة.**
+Research package v1 — 2026-11-09. **The images are a research source; they are not an approved Stage 8 package.**
 
-## حدود الأدلة
+## Limits of the evidence
 
-المراجعة هنا فحص بصري لـ520 إطارًا من ستة ملفات فيديو، بمعدل إطار في الثانية من البداية إلى النهاية، مع قراءة النصوص الظاهرة وتفريغ آلي عربي للمقطع الأساسي. ليست مشاهدة حركة متصلة، ولا استماعًا. الثقة High في العناصر المرئية الكبيرة؛ Medium في تعيين حدود القطع (نحو نصف ثانية)؛ غير متحققة في الموسيقى ونبرة الصوت وتزامن الشفاه. لا يثبت ذلك جودة حركة أي نموذج أو إعدادًا إنتاجيًا.
+The review here is a visual examination of 520 frames from six video files, at one frame per second from start to finish, along with reading the on-screen text and an automatic Arabic transcript of the main clip. It is not continuous motion viewing, nor listening. Confidence is High for large visual elements; Medium for locating cut boundaries (about half a second); unverified for music, voice tone and lip sync. This does not establish the motion quality of any model or a production setup.
 
-## الشخصية — CHAR-MO-REF-v1
+## Character — CHAR-MO-REF-v1
 
-الاسم مرتبط بالمقدّم بتحديد المستخدم وسياق القناة، وليس تعرفًا بيومتريًا. المصدر الوحيد للوحة الهوية: المقطع الذي أرسله المستخدم `6UnyBbimn0I` المنشور 2025-11-26. لا نفترض أنه يعكس مظهره الحالي تمامًا.
+The name is attached to the presenter based on the user's identification and the channel context, not biometric recognition. The only source for the identity board: the clip the user sent, `6UnyBbimn0I`, published 2025-11-26. We do not assume it fully reflects his current appearance.
 
-- شكل مرئي: شعر داكن قصير مع طول أعلى الرأس وتسريح جانبي، شارب ظاهر، ذقن دون لحية كثيفة ظاهرة؛ لون البشرة يتغير بالإضاءة، فلا HEX للبشرة ولا قياسات جسم مخمّنة. [LIB:library-kyu-white-friday.md#6-characters]
-- الزي: ثوب أبيض بياقة قائمة وجيب صدر، حذاء/صندل داكن في الكامل؛ قطعة ميكروفون سوداء دائرية على الصدر. [LIB:library-kyu-white-friday.md#9-craft]
-- الأداء المرئي: نظر مباشر للعدسة، إشارة بالسبابة، كف مفتوح، عدّ الكمية بالأصابع، تقريب العبوة إلى الكاميرا، انتقال من شرح إلى ابتسامة. هذه أوصاف أداء لا صفات شخصية نفسية. [LIB:library-kyu-white-friday.md#6-characters]
-- اللوحة تضم: جسمًا كاملًا، أماميًا مع إشارة، كفًا مفتوحًا، وجهًا أقرب أثناء الكلام، ابتسامة، وزاوية للجسم مع الإشارة. مصدر الصور في بيان النسخة، وكل ملف منفصل 720×1280. لا توجد صورة وجه محايد نظيفة ولا جانبان كاملان ولا خلف. هذه نواقص، وليست N/A. [LIB:assets/2026-11-09/manifest-v1.json]
-- لا يدخل مقدّم النظارات في مقطعي الهدايا والفرع إلى هوية محمد عمر. ولا تُخلط الشخصيات المركبة في مقطعي الديمو والإلكترونيات مع المصدر الأساسي. [LIB:library-kyu-customer-reactions.md#6-characters] [LIB:library-kyu-ai-demo-call.md#14-compliance]
+- Visible look: short dark hair with length on top and a side sweep, visible mustache, chin without a visibly thick beard; skin tone changes with lighting, so no skin HEX and no guessed body measurements. [LIB:library-kyu-white-friday.md#6-characters]
+- Wardrobe: white thobe with a standing collar and a chest pocket, dark shoes/sandals in the full shot; a round black microphone piece on the chest. [LIB:library-kyu-white-friday.md#9-craft]
+- Visible performance: direct look into the lens, pointing with the index finger, open palm, counting quantity on the fingers, bringing the pack toward the camera, shifting from explanation to a smile. These are performance descriptions, not psychological personality traits. [LIB:library-kyu-white-friday.md#6-characters]
+- The board includes: full body, frontal with pointing, open palm, a closer face while speaking, a smile, and an angled body with pointing. The image sources are in the version manifest, and each file is a separate 720×1280. There is no clean neutral face image, no two full profiles and no back view. These are gaps, not N/A. [LIB:assets/2026-11-09/manifest-v1.json]
+- The presenter with glasses in the gifts and branch clips is not included in Mohammed Omar's identity. Nor are the composited figures in the demo and electronics clips mixed with the main source. [LIB:library-kyu-customer-reactions.md#6-characters] [LIB:library-kyu-ai-demo-call.md#14-compliance]
 
-![لوحة الشخصية](assets/2026-11-09/mohammed-omar-character-v1.jpg)
+![Character board](assets/2026-11-09/mohammed-omar-character-v1.jpg)
 
-## خلاصة ما عرفناه عن محمد عمر
+## Summary of what we learned about Mohammed Omar
 
-هذه خلاصة ظهوره في العينة، وليست وصفًا لشخصيته الخاصة خارج التصوير:
+This is a summary of how he appears in the sample, not a description of his private personality outside filming:
 
-- يقدم العرض مباشرة للعدسة، ويحمل المنتج ويوضح الكمية ويقرب العبوة إلى المشاهد. يجعل القيمة مرئية بعرض المجموعة أو الكرتون وشرح المحتوى باليد. [LIB:library-kyu-white-friday.md#4-time-structure]
-- يربط بعض المنتجات بمواقف اجتماعية مألوفة مثل جلسة الديوانية. [LIB:library-kyu-white-friday.md#5-strategy]
-- أداؤه البصري يتضمن الإشارة بالسبابة والعد بالأصابع والكف المفتوح والاقتراب من العدسة والتبدل بين الشرح والابتسامة. [LIB:library-kyu-white-friday.md#6-characters]
-- مظهره في المصدر الأساسي المؤرخ 2025-11-26: ثوب أبيض، شعر داكن قصير بتسريح جانبي، شارب ظاهر وميكروفون صغير على الصدر. لا يؤكد هذا مظهره الحالي. [LIB:assets/2026-11-09/manifest-v1.json]
-- اهتمامه المعلن بالتسويق بالذكاء الاصطناعي يستند إلى مقطع طلب الديمو وعنوانه والنصوص المرئية؛ طلب مثال عملي دليل على نوع الطلب الإبداعي، وليس دليلًا على أفكاره الخاصة أو شروط تكليف كاملة. [LIB:library-kyu-ai-demo-call.md]
-- [ASSUMPTION] قراءة إبداعية بدرجة ثقة Medium: يمكن بناء حضور درامي له يجمع شرح العرض بثقة والتفاعل القريب مع الناس؛ نحتاج موقفًا وسلوكًا محددين يبرزان ذلك، بدل حوار عام يصلح لأي مقدم. هذه توصية تطوير، وليست شخصية درامية معتمدة أو حقيقة نفسية.
-- غير محسوم: شخصيته خارج التصوير، تفاصيل النبرة والأداء الصوتي لعدم الاستماع، وموافقته على توليد الشبه أو الصوت. لا تُحوَّل هذه الحقول إلى حقائق مؤكدة. [BRAND:Basics]
+- He presents the offer directly to the lens, holds the product, explains the quantity and brings the pack close to the viewer. He makes value visible by showing the bundle or the carton and explaining its contents by hand. [LIB:library-kyu-white-friday.md#4-time-structure]
+- He links some products to familiar social situations such as a diwaniya gathering. [LIB:library-kyu-white-friday.md#5-strategy]
+- His visual performance includes pointing with the index finger, counting on his fingers, an open palm, moving close to the lens, and switching between explaining and smiling. [LIB:library-kyu-white-friday.md#6-characters]
+- His appearance in the main source dated 2025-11-26: white thobe, short dark hair with a side sweep, visible mustache and a small microphone on the chest. This does not confirm his current appearance. [LIB:assets/2026-11-09/manifest-v1.json]
+- His stated interest in AI marketing is based on the demo call-out clip, its title and the visible text; asking for a practical example is evidence of the type of creative request, not evidence of his own ideas or full commissioning terms. [LIB:library-kyu-ai-demo-call.md]
+- [ASSUMPTION] A creative reading at Medium confidence: a dramatic presence can be built for him that combines confidently explaining the offer with close interaction with people; we need a specific situation and behavior that bring this out, instead of generic dialogue that would suit any presenter. This is a development recommendation, not an approved dramatic character or a psychological fact.
+- Unresolved: his personality outside filming, details of tone and vocal performance because there was no listening, and his consent to generating his likeness or voice. These fields are not to be turned into confirmed facts. [BRAND:Basics]
 
-## اللغة والأسلوب التحريري
+## Language and editorial style
 
-المقطع الأساسي يستخدم كلامًا محكيًا مباشرًا مع تسمية المنتج والكمية ثم السعر، ويخصّص جزءًا لجلسة الديوانية. مقطع الهدايا يشرح ثم يعرض التسليم. مقطع الديمو يطلب مثالًا عمليًا ثم يقلب المشهد في الخاتمة. هذه ثلاثة أنماط مختلفة، وليست قالبًا واحدًا لجميع منشورات القناة. [LIB:library-kyu-white-friday.md#4-time-structure] [LIB:library-kyu-customer-reactions.md#4-time-structure] [LIB:library-kyu-ai-demo-call.md#4-time-structure]
+The main clip uses direct colloquial speech, naming the product and quantity and then the price, and devotes a section to the diwaniya gathering. The gifts clip explains and then shows the delivery. The demo clip asks for a practical example and then flips the scene at the end. These are three different patterns, not a single template for all of the channel's posts. [LIB:library-kyu-white-friday.md#4-time-structure] [LIB:library-kyu-customer-reactions.md#4-time-structure] [LIB:library-kyu-ai-demo-call.md#4-time-structure]
 
-[ASSUMPTION] توصية للكاتب: حافظ على لغة المحادثة والدليل المرئي، واختصر إلى رسالة واحدة في فيلم المشروع. لا تحول كل جملة إلى سعر جديد. استخدم التضاد والانتظار ثم الكشف؛ لا تنسخ السكربت الأصلي.
+[ASSUMPTION] Recommendation for the writer: keep the conversational language and the visual proof, and reduce to a single message in the project ad. Do not turn every sentence into a new price. Use contrast and waiting, then the reveal; do not copy the original script.
 
-## الشكل البصري — STYLE-RESEARCH-v1
+## Visual look — STYLE-RESEARCH-v1
 
-1. مصدر 2025: ثوب أبيض أمام وفرة لونية من السلع، ومنظور قريب، وحركة المقدم بالنسبة للعدسة. السعر أصفر كبير، المقارنة حمراء، والنص الأساسي أبيض بحد أسود. الثقة High بالملاحظة، دون تعيين خط تجاري أو ألوان هوية رسمية. [LIB:library-kyu-white-friday.md#9-craft]
-2. مصدر الإلكترونيات: تكرار العبوات كديكور، حلقة سقف سوداء، تركواز وأرضية فاتحة، ونص متحرك قرب أعلى الشاشة. لا يُستنتج أن كل فروع كيو بهذا الشكل. [LIB:library-kyu-electronics-arrival.md#9-craft]
-3. فيلم البلندور: ليل بارد ونقاط ضوء دافئة، بدلات داكنة وشيء ذهبي واضح، قطع بين حدث ورد فعل وشاشة بث. [LIB:library-ballon-dor-heist.md#9-craft]
+1. 2025 source: white thobe in front of a colorful abundance of goods, close perspective, and the presenter's movement relative to the lens. Price in large yellow, comparison in red, and the main text white with a black outline. Confidence High for the observation, without identifying a commercial typeface or official brand colors. [LIB:library-kyu-white-friday.md#9-craft]
+2. Electronics source: repeated boxes as set dressing, a black ceiling ring, turquoise and a light floor, and moving text near the top of the screen. It is not to be inferred that all Kyu branches look like this. [LIB:library-kyu-electronics-arrival.md#9-craft]
+3. Ballon d'Or film: cold night and warm points of light, dark suits and a clearly visible gold object, cutting between action, reaction and a broadcast screen. [LIB:library-ballon-dor-heist.md#9-craft]
 
-[ASSUMPTION] تركيب مناسب لاحقًا: حجم وحضور سينمائي مستلهم من البلندور مع وضوح السلعة والقرب من المتلقي في كيو؛ لا نسخ للنجوم أو الكأس. يظل T1/T2/T3 قيدًا: كتابة واضحة ومركز اهتمام خارج أسفل 20% ويمين 15%، وافتتاح خلال ثانيتين. الصور الأصلية ليست نموذج safe-zone معتمدًا.
+[ASSUMPTION] A suitable later combination: the cinematic scale and presence inspired by the Ballon d'Or, together with Kyu's product clarity and closeness to the viewer; no copying of the stars or the trophy. T1/T2/T3 remain constraints: clear text and the focus of attention kept outside the bottom 20% and the right 15%, and an opening within two seconds. The original images are not an approved safe-zone template.
 
-## المكان — LOC-KYU-RESEARCH-v1
+## Place — LOC-KYU-RESEARCH-v1
 
-| المرجع | ما يظهر | ما لا يثبته |
+| Reference | What appears | What it does not establish |
 |---|---|---|
-| المقطع الأساسي 0–6 ث | واجهة تركواز/طوبي ولافتة كيو وموقف سيارات | عنوان الفرع أو مظهره الحالي |
-| 6–80 ث | سقف مكشوف، خطوط إضاءة، واجهات رص سلع رأسية وأهرامات وبطاقات أسعار | مخطط كامل أو أبعاد هندسية |
-| 80–98 ث | أسطوانات عرض داكنة وأطباق وعبوات مجمدات وخلفية كولاج | أن هذه ركن دائم في المتجر |
-| جولة النسيم 0–12 ث | مستوردات: وردي وتركواز، رفوف قيد التجهيز | اكتمال التشغيل |
-| 13–28 ث | أسماك وخدمة، معدنيات وزخارف أسماك مضيئة | تصميم نهائي أو أبعاد دقيقة |
-| 29–54 ث | لافتات Q FIT وQ GREEK ومخبوزات وثلاجات وأفران | قائمة فروع معتمدة أو أسعار راهنة |
+| Main clip 0–6 s | Turquoise/brick storefront, Kyu sign and a car park | The branch address or its current appearance |
+| 6–80 s | Exposed ceiling, light lines, vertical stacked-goods displays, pyramids and price cards | A full layout or architectural dimensions |
+| 80–98 s | Dark display cylinders, dishes, frozen-food packs and a collage background | That this is a permanent corner of the store |
+| Al-Naseem tour 0–12 s | Imports: pink and turquoise, shelves under fit-out | That operations are complete |
+| 13–28 s | Fish and service, metalwork and illuminated fish decorations | Final design or exact dimensions |
+| 29–54 s | Q FIT and Q GREEK signs, baked goods, fridges and ovens | An approved branch list or current prices |
 
 [LIB:library-kyu-white-friday.md#4-time-structure] [LIB:library-kyu-naseem-store.md#4-time-structure]
 
-![لوحة المكان](assets/2026-11-09/kyu-locations-v1.jpg)
+![Location board](assets/2026-11-09/kyu-locations-v1.jpg)
 
-## المنتجات والأدوات — PRODUCT/PROP-RESEARCH-v1
+## Products and props — PRODUCT/PROP-RESEARCH-v1
 
-عائلات مرئية: منظفات، معلبات، مشروبات، سناك وحلوى، عناية شخصية، أغذية مجمدة، وعلب هواتف في مصدر منفصل. أدوات العرض: طاولة مستديرة بقماش أحمر، أسطوانة داكنة، طبق تقديم، كرتون مفتوح، علبة هدية بيضاء بشريط أحمر. تُفصل أدوات العرض عن عبوات المنتج والشعارات. [LIB:library-kyu-white-friday.md#4-time-structure] [LIB:library-kyu-customer-reactions.md#7-creative-mechanism]
+Visible families: cleaning products, canned goods, drinks, snacks and sweets, personal care, frozen foods, and phone boxes in a separate source. Display props: a round table with red cloth, a dark cylinder, a serving dish, an open carton, a white gift box with a red ribbon. Display props are kept separate from product packaging and logos. [LIB:library-kyu-white-friday.md#4-time-structure] [LIB:library-kyu-customer-reactions.md#7-creative-mechanism]
 
-هذه **صور سياق واستعمال**؛ ليست Product Sheets نظيفة متعددة الزوايا. يلزم مصدر منتج حقيقي عالي الدقة للمنتج المختار. لا توليد لنص العبوة أو شعارها. أسعار 2025 وشروط الإرجاع الظاهرة لا تُضاف تلقائيًا إلى Approved claims. [BRAND:Offer and products]
+These are **context and usage images**; they are not clean multi-angle Product Sheets. A real high-resolution product source is required for the chosen product. No generation of packaging text or logos. 2025 prices and the visible return conditions are not automatically added to Approved claims. [BRAND:Offer and products]
 
-![لوحة المنتجات والأدوات](assets/2026-11-09/kyu-products-props-v1.jpg)
+![Products and props board](assets/2026-11-09/kyu-products-props-v1.jpg)
 
-## الصوت — AUDIO-RESEARCH-v1
+## Audio — AUDIO-RESEARCH-v1
 
-تحديث 2026-11-09: [اكتمل تحليل قياسي محلي للصوت](library-mohammed-omar-voice-analysis.md) مع أربع عينات مؤقتة وقياس الطبقة والجهارة وكثافة الكلام. لم تكتمل المراجعة السمعية لأن الواجهة لا تدعم إدخال الصوت. موافقة المستخدم على معالجة هذا التسجيل لدى OpenAI لهذا التحليل فقط مسجلة في ملف العلامة؛ لا تزال الموافقات الأخرى منفصلة.
+Update 2026-11-09: [a local measurement-based audio analysis is complete](library-mohammed-omar-voice-analysis.md), with four temporary samples and measurement of pitch, loudness and speech density. The listening review is not complete because the API does not support audio input. The user's consent to processing this recording with OpenAI for this analysis only is recorded in the brand file; other consents remain separate.
 
 
-حُفظ المسار الصوتي الموجود في نسخة العرض لكل فيديو بصيغة M4A دون إعادة ترميز أو استنساخ. يوجد سجل اللغة ودقة الصورة في `work/research/2026-11-09-youtube/source-manifest.json`. وجود صوت في الملف لا يعني أنه خضع للاستماع أو أنه مرجع صوت نقي.
+The audio track present in the delivery version of each video was saved as M4A without re-encoding or cloning. The record of language and image resolution is in `work/research/2026-11-09-youtube/source-manifest.json`. The presence of audio in the file does not mean it has been listened to or that it is a clean voice reference.
 
-- مصدر محمد عمر الأساسي: `work/research/2026-11-09-youtube/6UnyBbimn0I/source-audio.m4a`.
-- مصدر البلندور: `work/research/2026-11-09-youtube/7bXypdyb_uw/source-audio.m4a`.
-- لكل مصدر إضافي الملف نفسه داخل مجلد معرفه.
-- تفريغ عربي آلي محفوظ للمقطع الأساسي فقط: `source.ar.json3`. **لا يُعتمد لنسخ الأسعار**: عند نحو 8 ثوانٍ يعرض النص المرئي 29.80 بينما التفريغ يختزلها إلى 29؛ ونحو 20–22 ثانية تظهر 5.80 ويختزلها التفريغ إلى 5. أسماء المنتجات أيضًا تحتاج مراجعة. [LIB:library-kyu-white-friday.md#9-craft]
-- النبرة، الطبقة، الخشونة، الإيقاع الموسيقي، المؤثرات، وملاءمة فصل صوت نقي: **NOT REVIEWED**. لا توجد توصية استنساخ صوت أو ادعاء نجاح Saudi lip-sync. [BRAND:Basics] [TECH:tech-test.md]
+- Mohammed Omar main source: `work/research/2026-11-09-youtube/6UnyBbimn0I/source-audio.m4a`.
+- Ballon d'Or source: `work/research/2026-11-09-youtube/7bXypdyb_uw/source-audio.m4a`.
+- Each additional source has the same file inside its ID folder.
+- An automatic Arabic transcript is saved for the main clip only: `source.ar.json3`. **Not to be relied on for copying prices**: at about 8 seconds the on-screen text shows 29.80 while the transcript shortens it to 29; and at about 20–22 seconds 5.80 appears and the transcript shortens it to 5. Product names also need review. [LIB:library-kyu-white-friday.md#9-craft]
+- Tone, pitch, roughness, musical rhythm, effects, and suitability for isolating a clean voice: **NOT REVIEWED**. There is no voice-cloning recommendation or claim of Saudi lip-sync success. [BRAND:Basics] [TECH:tech-test.md]
 
-## ما نأخذه من البلندور
+## What we take from the Ballon d'Or
 
-توجيه العميل: المرجع لتعلّم مستوى الصنعة والكتابة الدقيقة، وليس لاشتقاق حبكة مشابهة. ما ندرسه: خصوصية نكتة كل شخصية، تناقض أهدافها، زراعة التفاصيل وعودتها بوظائف جديدة، أثر النكتة في الحدث، وردود الفعل. لا تُعتمد توصية «شيء يريده الجميع ثم مطاردة» كاتجاه لكيو. [دراسة الشخصيات والنكات والتفاصيل](ballon-dor-creative-craft-study.md).
+Client direction: the reference is for learning the level of craft and precise writing, not for deriving a similar plot. What we study: the specificity of each character's joke, the contradiction in their goals, planting details and bringing them back with new functions, the joke's effect on the action, and the reactions. The recommendation "something everyone wants, then a chase" is not adopted as a direction for Kyu. [Study of characters, jokes and details](ballon-dor-creative-craft-study.md).
 
-[ASSUMPTION] عند توليد فكرة جديدة نسأل: ما الذي يجعل هذه النكتة تخص هذه الشخصية؟ وما الذي يجعل هذا التفصيل نابعًا من عالم كيو؟ الفكرة ونوعها وحبكتها تظل مفتوحة وتُختار عبر مراحل المشروع.
+[ASSUMPTION] When generating a new idea we ask: what makes this joke belong to this character? And what makes this detail come from Kyu's world? The idea, its genre and its plot remain open and are chosen through the project's stages.
 
-## الوضع الإنتاجي
+## Production status
 
-RESEARCH ONLY / NOT QC LOCKED. لا يوجد Style Guide إنتاجي معتمد، ولا زوايا هوية كاملة، ولا صور منتج نظيفة، ولا مواقع مثبتة الحالية، ولا مراجعة سمعية. طلب البحث سمح بأرشفة المراجع؛ موافقة الشبه/الصوت في ملف العلامة لا تزال TO CONFIRM. لا تستخدم هذه الحزمة لتمرير Stage 8 أو اختبار حركة. لم يعمل هنا حكم مستقل أو وكيل QC؛ المراجعة قام بها المنسق في هذه المحادثة.
+RESEARCH ONLY / NOT QC LOCKED. There is no approved production Style Guide, no complete identity angles, no clean product images, no locations confirmed in their current state, and no listening review. The research request allowed archiving the references; likeness/voice consent in the brand file is still TO CONFIRM. Do not use this package to pass Stage 8 or a motion test. No independent judge or QC agent worked here; the review was done by the coordinator in this conversation.
 
 
 ### HANDOFF
-- Stage completed: تغذية مكتبة بحثية بصرية؛ الصوت محفوظ وغير مفحوص سمعيًا؛ لا قفل إنتاجي.
-- Output file(s) written: `knowledge/library/library-kyu-visual-character-place-audio.md`؛ اللوحات والصور في `knowledge/library/assets/2026-11-09/`.
-- Next agent and what they need from this output: الباحث والكاتب ومدير التصوير؛ الأدلة والتوقيتات ونسخ الصور. QC مستقل عند طلب قفل الإنتاج.
-- Open questions for the human (max 3, each with a recommended answer): هل توجد موافقة موثقة من محمد عمر لاستخدام شبهه وصوته مولدين؟ التوصية: إرفاقها قبل أي توليد للشبه أو الصوت. وما الفرع والمنتج الحاليان المقصودان؟ التوصية: تحديدهما قبل بناء الحزمة الإنتاجية.
+- Stage completed: visual research library intake; audio saved and not examined by listening; no production lock.
+- Output file(s) written: `knowledge/library/library-kyu-visual-character-place-audio.md`; boards and images in `knowledge/library/assets/2026-11-09/`.
+- Next agent and what they need from this output: researcher, writer and director of photography; the evidence, timings and image copies. Independent QC when a production lock is requested.
+- Open questions for the human (max 3, each with a recommended answer): Is there documented consent from Mohammed Omar to use his likeness and voice in generated form? Recommendation: attach it before any generation of the likeness or voice. And which current branch and product are intended? Recommendation: specify them before building the production package.
 - Decision log lines added: DL-008.

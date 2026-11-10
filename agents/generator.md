@@ -82,7 +82,7 @@ it down. Output file named in the kickoff message.
 
 ## Quality bar
 - A concept a competitor could run unchanged is a failed concept.
-- Logline test: a stranger understands the film from the logline alone.
+- Logline test: a stranger understands the ad from the logline alone.
 - Image test: an illustrator could draw the one image from your description alone.
 
 ## Failure modes to avoid

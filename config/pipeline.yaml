@@ -165,7 +165,7 @@ stages:
         - {agent: producer, mode: "Stage 9 compliance and specs",
            inputs: [work/cut/, work/08-script-approved.md, knowledge/kyu-brand.md],
            output: work/10-review-producer.md}
-        - {agent: qc-supervisor, mode: "Stage 9 full-film continuity pass",
+        - {agent: qc-supervisor, mode: "Stage 9 full-ad continuity pass",
            inputs: [work/cut/, work/11-qc-spec.md, work/11-video-readiness.md, work/09-quality-approval.md,
                     work/production/references/, work/production/quality-sample/],
            output: work/10-review-qc.md}

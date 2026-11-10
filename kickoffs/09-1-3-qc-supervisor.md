@@ -2,7 +2,7 @@ KICKOFF
 agent: qc-supervisor
 role: qc-supervisor
 stage: 09 — Review
-mode: Stage 9 full-film continuity pass
+mode: Stage 9 full-ad continuity pass
 params: -
 inputs:
   - work/cut/

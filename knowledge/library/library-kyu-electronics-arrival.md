@@ -1,68 +1,68 @@
-# وووصلللل ووصللل 🤯🤯 #كيو #اكسبلور #عروض
+# وووصلللل ووصللل 🤯🤯 #كيو #اكسبلور #عروض ("It's arriiived, it's arrived 🤯🤯 #Kyu #Explore #Offers")
 
-تاريخ البحث: 2026-11-09. مراجعة بصرية لإطارات من ملف الفيديو بمعدل صورة كل ثانية؛ ليست مشاهدة حركة مستمرة أو استماعًا. توقيت صفحات المراجعة تقريبي بفارق نحو نصف ثانية.
+Research date: 2026-11-09. Visual review of frames from the video file at one frame per second; not continuous motion viewing or listening. Timings on the review sheets are approximate, to within about half a second.
 
 ## 1. CARD
 
-المصدر: [محمد عمر | كيو](https://www.youtube.com/watch?v=BjjG5B7ZIaI). تاريخ النشر بحسب بيانات يوتيوب: 20261107. المدة: 54 ثانية. المنصة: YouTube. القطاع: تجزئة / محتوى قناة العلامة. صفة الإعلان المدفوع غير مثبتة. الأداء النسبي والاحتفاظ: غير متاحين.
+Source: [محمد عمر | كيو](https://www.youtube.com/watch?v=BjjG5B7ZIaI) ("Mohammed Omar | Kyu"). Publish date per YouTube metadata: 20261107. Duration: 54 seconds. Platform: YouTube. Sector: retail / brand channel content. Paid-ad status not confirmed. Relative performance and retention: not available.
 
-الأدلة المحلية: `work/research/2026-11-09-youtube/BjjG5B7ZIaI/source.mp4`، `source.info.json`، `frames/`، `review-*.jpg`، `source-audio.m4a`. [LIB:library-kyu-electronics-arrival.md#card]
+Local evidence: `work/research/2026-11-09-youtube/BjjG5B7ZIaI/source.mp4`, `source.info.json`, `frames/`, `review-*.jpg`, `source-audio.m4a`. [LIB:library-kyu-electronics-arrival.md#card]
 
 ## 2. THE IDEA IN ONE SENTENCE
 
-عرض هاتف وسط تكرار كثيف لعبواته، يتبعه شرح مكتوب ثم تفاعل ختامي مركّب مع شخصية مشهورة.
+A phone showcase amid a dense repetition of its boxes, followed by a written explanation and then a closing composited interaction with a famous figure.
 
 ## 3. HOOK (0–3 s)
 
-مقدم صغير نسبيًا خلف قوس من علب الهواتف يتقدم نحوه التصوير، مع كتابة كبيرة أعلى الإطار؛ H06 أساسي وH13 ثانوي. اللون والتكرار يصنعان الحجم.
+A relatively small presenter behind an arch of phone boxes, with the camera pushing toward him and large text at the top of the frame; H06 primary and H13 secondary. Color and repetition create the sense of scale.
 
 ## 4. TIME STRUCTURE
 
-0–9: كشف خلف صفوف العبوات؛ 9–23: تقريب المنتج ونصوص عن العرض؛ 24–36: استمرار الشرح؛ 37–42: قريب للوجه واليد؛ 43–54: ظهور شخصية مشهورة وتفاعل كوميدي.
+0–9: reveal from behind rows of boxes; 9–23: close-up on the product and text about the offer; 24–36: explanation continues; 37–42: close on the face and hand; 43–54: a famous figure appears and a comedic interaction.
 
 ## 5. STRATEGY
 
-[ASSUMPTION] تحويل وصول منتج إلى حدث بالوفرة والتصعيد. لا يعتمد البحث نوع الجهاز أو ضمانه أو تاريخ العرض كحقائق حالية.
+[ASSUMPTION] Turning a product arrival into an event through abundance and escalation. The research does not treat the device model, its warranty, or the offer date as current facts.
 
 ## 6. CHARACTERS
 
-مقدم بثوب أبيض وشعر قصير وشارب؛ شخصية ختامية تبدو مركبة. اختلاف المعالجة عن مصدر 2025 يستدعي فصل نسخ المظهر؛ لا نخلطها في هوية واحدة معتمدة.
+Presenter in a white thobe, short hair and a mustache; the closing figure appears to be composited. The difference in treatment from the 2025 source calls for keeping the appearance versions separate; we do not merge them into one approved identity.
 
 ## 7. CREATIVE MECHANISM
 
-تكرار الشيء بصريًا ثم تفاعل غير متوقع. أداة العرض نفسها تصنع ديكورًا يملأ الإطار.
+Visual repetition of the object, then an unexpected interaction. The display fixture itself becomes set dressing that fills the frame.
 
 ## 8. COMEDY AND EMOTION
 
-الخاتمة مبنية على مفارقة ظهور شخصية مرتبطة بالمنتج. لا ينقل هذا الاعتماد على شهرتها إلى مشروع كيو المقيد بـC2.
+The ending is built on the irony of a figure associated with the product appearing. This reliance on the figure's fame does not carry over to the Kyu project, which is restricted under C2.
 
 ## 9. CRAFT
 
-9:16؛ قسم ذو سقف أبيض وحلقة سوداء وإضاءة خطية وتركواز؛ صناديق بنفسجية متكررة؛ كلمات بيضاء وخضراء وصفراء وحمراء. الصوت محفوظ غير مفحوص.
+9:16; a section with a white ceiling, a black ring, linear lighting and turquoise; repeated purple boxes; words in white, green, yellow and red. Audio saved but not examined.
 
 ## 10. ENDING AND ENGAGEMENT
 
-خاتمة رد فعل مركب بعد شرح العرض؛ ليس حكمًا على واقعية المشهد أو ترخيص الشبه.
+A composited reaction ending after the offer explanation; this is not a judgment on the realism of the scene or the licensing of the likeness.
 
 ## 11. ASSESSMENT
 
-[ASSUMPTION] قوة محتملة: حجم العرض؛ تغيير المسافة؛ مفاجأة أخيرة. مخاطر: إدعاءات سعر وضمان وشبه مشهور، واختلاط التسجيل بالمشهد المركب.
+[ASSUMPTION] Possible strengths: scale of the display; changes in distance; a final surprise. Risks: price, warranty and celebrity-likeness claims, and the mixing of recorded footage with the composited scene.
 
 ## 12. WHAT TRANSFERS
 
-اصنع كتلة بصرية من المنتج ثم اكشف مفارقة أصلية مرتبطة بمنفعته؛ لا تعِد توليد الشعار أو العبوة ولا تستدعِ شخصية مشهورة.
+Build a visual mass out of the product, then reveal an original twist tied to its benefit; do not regenerate the logo or packaging, and do not bring in a famous figure.
 
 ## 13. AI PRODUCTION FEASIBILITY
 
-تكرار العبوات يُنفذ بصور حقيقية وتركيب؛ الأيدي والكتابة والنماذج المتطابقة تحتاج ضبطًا. لا دليل على جودة توليد المشروع نفسه.
+The repeated boxes can be done with real photos and compositing; hands, text and identical models need careful control. No evidence of the project's own generation quality.
 
 ## 14. COMPLIANCE
 
-C1/C2/C3: شخصية مشهورة وعلامات وادعاءات تجارية؛ مرجع تصميم وسرد فقط، وليس مصدر هوية أو ترخيص.
+C1/C2/C3: a famous figure, brands and commercial claims; a design and narrative reference only, not a source of identity or licensing.
 
 ### HANDOFF
-- Stage completed: إدخال مرجع بحثي؛ لا PASS إنتاجي.
+- Stage completed: research reference intake; no production PASS.
 - Output file(s) written: `knowledge/library/library-kyu-electronics-arrival.md`.
-- Next agent and what they need from this output: الباحث/الكاتب/مدير التصوير؛ الرجوع للصور المؤقتة وربط أي اقتباس بالمصدر.
-- Open questions for the human (max 3, each with a recommended answer): لا سؤال مطلوب لاستعمال التحليل الداخلي؛ اعتماد العروض والحقوق منفصل قبل الإنتاج.
-- Decision log lines added: DL-008 (قرار مشترك لحزمة البحث).
+- Next agent and what they need from this output: researcher/writer/director of photography; refer back to the temporary images and link any quotation to its source.
+- Open questions for the human (max 3, each with a recommended answer): no question needed to use the internal analysis; approval of offers and rights is separate, before production.
+- Decision log lines added: DL-008 (shared decision for the research package).

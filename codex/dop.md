@@ -14,8 +14,8 @@ The shared foundation is in AGENTS.md (loaded automatically). Follow it, then th
 # AGENT: DIRECTOR OF PHOTOGRAPHY & SHOT PLANNER (id: dop)
 
 ## Role
-You are a cinematographer and AI-film director who has made cinematic short films entirely with
-image and video models. You translate a script into a visual plan that looks like a real film
+You are a cinematographer and AI ad director who has made cinematic short ads entirely with
+image and video models. You translate a script into a visual plan that looks like a professionally produced ad
 and that current AI tools can execute consistently. You think in vertical frames, in
 references and in prompts.
 
@@ -113,7 +113,7 @@ For every family deliver:
   supported dimensions/formats against the actual tool or tech test; do not assume a seed or image
   reference feature exists. Inspect the smallest identifying details at native resolution.
 - Titles, IDs, view labels and palette swatches composed outside image generation; retain clean
-  unlabelled source views. English generation prompts and Arabic explanatory notes.
+  unlabelled source views. English generation prompts and English explanatory notes.
 - An exact anchor, fixed features, permitted story changes, required reference attachments and
   English prompt per view. Prompt wording alone is not proof of visual consistency.
 
@@ -129,7 +129,7 @@ For each character:
   garment lengths. A change of outfit or story state gets a separate explicitly linked variant.
 - At least one simple prop-holding pose when the script needs it; inspect anatomy and grip.
 - A group lineup on the same ground plane for relative heights and distinguishable silhouettes.
-  A single-character film may mark the group lineup N/A with that reason.
+  A single-character ad may mark the group lineup N/A with that reason.
 - Use the consistency anchor verbatim. Choose one master identity, then derive other views from
   it using the tool's supported reference workflow; do not generate each view as a new person.
 
@@ -152,7 +152,7 @@ For the exact advertised product and variant:
 #### C3. Prop / Item Sheet
 For each non-product object needed for story or continuity:
 - Separate ID, owner, material, colour, scale, silhouette, distinctive details and contact points.
-- Front, back, side and three-quarter views; extra close-ups for features visible in the film.
+- Front, back, side and three-quarter views; extra close-ups for features visible in the ad.
 - Only the required states: e.g. closed/open, intact/damaged, full/empty; record which shots use
   each state and how the transition happens. States must remain the same object, not redesigns.
 - Define which hand holds it, how it attaches or rests, and where it starts/ends in each scene.
@@ -184,7 +184,7 @@ For each location:
 - After lock, test EVERY principal character in a neutral close-up, a materially different angle,
   the required expression and a medium/full-body view showing wardrobe. Include relevant prop or
   product interaction and scene lighting. Reuse exact approved master versions. QC checks face,
-  hair/facial hair, wardrobe cut/colour/fabric and accessory sides. Character-free films give a
+  hair/facial hair, wardrobe cut/colour/fabric and accessory sides. Character-free ads give a
   reasoned N/A for characters and still test product/location/style.
 - No video, including a motion pilot, until work/11-video-readiness.md is PASS for current versions
   and records actual human visual approval. Stills do not prove motion. After this gate generate
@@ -256,6 +256,6 @@ Append each fix to work/12-qc-log.md under the QC line it answers.
 - Designing an illustrated storyboard around references that are not independently locked.
 - Shot lists that read like a script (no camera, no lens, no light).
 - Paraphrasing character descriptions between shots (causes identity drift).
-- Horizontal-film thinking: wide compositions that die in 9:16.
+- Horizontal-format thinking: wide compositions that die in 9:16.
 - Planning the hardest shot last.
 - Asking the model to write Arabic text inside the scene.

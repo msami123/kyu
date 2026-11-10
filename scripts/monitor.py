@@ -258,15 +258,15 @@ def render(rows: list[AgentProcess], project: Path | None = ROOT, test_state: di
 
 
 ROLE_LABELS = {
-    'creative-director': 'المدير الإبداعي: الموجز واختيار الفكرة والشخصيات والاعتماد',
-    'producer': 'المنتج: قابلية التنفيذ والوقت والميزانية والامتثال',
-    'researcher-strategist': 'الباحث والاستراتيجي: العلامة والجمهور والسوق والمراجع',
-    'generator-a': 'مولد الأفكار A: أفكار مستقلة من الزوايا الإبداعية الأولى',
-    'generator-b': 'مولد الأفكار B: أفكار مستقلة من زوايا إبداعية أخرى',
-    'critic': 'الناقد: تقييم الأفكار والسيناريو ومراجعة النسخة',
-    'writer': 'الكاتب: الشخصيات والسيناريو والحوار والكوميديا',
-    'dop': 'مدير التصوير: الشكل البصري والشيتات واللقطات والبرومبتات',
-    'qc-supervisor': 'مراقب الجودة: ثبات الملامح والملابس والمرجع والصوت والنص',
+    'creative-director': 'Creative director: brief, concept choice, characters and approvals',
+    'producer': 'Producer: feasibility, time, budget and compliance',
+    'researcher-strategist': 'Researcher-strategist: brand, audience, market and references',
+    'generator-a': 'Concept generator A: independent concepts from the first creative angles',
+    'generator-b': 'Concept generator B: independent concepts from other creative angles',
+    'critic': 'Critic: judges concepts and script, reviews the cut',
+    'writer': 'Writer: characters, script, dialogue and comedy',
+    'dop': 'Director of photography: look, sheets, shots and prompts',
+    'qc-supervisor': 'QC supervisor: identity, wardrobe, reference, audio and text consistency',
 }
 
 
@@ -291,7 +291,7 @@ def render_dashboard(rows, agents, runs=None, test_state=None, project=ROOT, wid
         test = test_rows.get(agent)
         test_running = test and test.get('status') in {'QUEUED', 'RUNNING'}
         provider = 'Claude' if cfg.get('provider') == 'anthropic' else 'Codex'
-        status, task = 'IDLE', 'لا توجد مهمة مسندة قيد التشغيل'
+        status, task = 'IDLE', 'No assigned task running'
         selected = None
         if active:
             selected = next((r for r in active if r['status'] == 'RUNNING'), active[0])
@@ -301,10 +301,10 @@ def render_dashboard(rows, agents, runs=None, test_state=None, project=ROOT, wid
                 status += f' x{len(active)}'
         elif processes:
             status, provider = processes[0].state, processes[0].provider
-            task = 'عملية CLI موجودة؛ تفاصيل المهمة غير مسجلة في مشغل المشروع'
+            task = 'CLI process present; task details not recorded by the project runner'
         elif test_running:
             status, provider = 'TEST ' + test['status'], test.get('provider', provider)
-            task = 'اختبار استجابة معزول؛ ليس عملاً إنتاجياً'
+            task = 'Isolated response test; not production work'
             represented_pids.add(test.get('pid'))
         elif assigned:
             selected = assigned[0]
@@ -313,11 +313,11 @@ def render_dashboard(rows, agents, runs=None, test_state=None, project=ROOT, wid
             task = f"S{selected.get('stage', '?')} {selected.get('task', '')}"
         elif test:
             status = 'IDLE'
-            task = ('لا توجد مهمة إنتاجية مسندة | آخر اختبار استجابة: ' +
+            task = ('No production task assigned | last response test: ' +
                     str(test.get('status', 'UNKNOWN')) + ' | ' + str((test_state or {}).get('started_at', '')))
         label = ROLE_LABELS.get(agent, cfg.get('description', agent))
         lines.append(safe_text(f'{agent:<24} {provider:<7} {status:<18} | {label}', width))
-        lines.append(safe_text('  Task / المهمة: ' + task, width))
+        lines.append(safe_text('  Task: ' + task, width))
         for r in active:
             if isinstance(r.get('pid'), int):
                 represented_pids.add(r['pid'])
@@ -332,13 +332,13 @@ def render_dashboard(rows, agents, runs=None, test_state=None, project=ROOT, wid
                 lines.append(safe_text(f"    {r['status']:<10} PID {r.get('pid') or '-'} | {r.get('task', '')} -> {r.get('output', '')}", width))
     other = [r for r in rows if r.pid not in represented_pids and r.ppid not in represented_pids]
     if other:
-        lines += ['', 'OTHER CLI SESSIONS / جلسات دون دور مسند']
+        lines += ['', 'OTHER CLI SESSIONS (no assigned role)']
         for row in other:
             lines.append(safe_text(f'  {row.provider} | {row.role} | PID {row.pid} | {elapsed_label(row.elapsed)} | {row.state}', width))
-    lines += ['', 'IDLE = خامل | QUEUED = ينتظر دوره | RUNNING = عملية بدأت | LAST = آخر تشغيل مسجل',
-              'COMPLETED = انتهى التشغيل؛ ليس اعتماداً إبداعياً أو PASS للبوابة.',
-              'ACTIVE = جلسة موجودة؛ قد تعمل أو تنتظر. المشغل يحتفظ بالتفاصيل النصية حتى النهاية.',
-              'Ctrl+C يغلق المتابعة فقط. لا تعرض هذه الشاشة التفكير الداخلي أو الردود الخاصة.']
+    lines += ['', 'IDLE = idle | QUEUED = waiting its turn | RUNNING = process started | LAST = last recorded run',
+              'COMPLETED = run finished; not a creative approval or a gate PASS.',
+              'ACTIVE = session exists; it may be working or waiting. The runner holds text details until the end.',
+              'Ctrl+C closes the monitor only. This screen never shows internal reasoning or private replies.']
     return '\n'.join(safe_text(line, width) for line in lines)
 
 

@@ -113,7 +113,7 @@ records who approved, date, exact character/look/benchmark versions, actual answ
 Silence or generic permission to proceed is not a visual approval.
 
 Continuity stills cover EVERY principal character: close-up, changed angle, required expression,
-wardrobe-visible view and relevant interaction. Character-free films give reasoned N/A for those
+wardrobe-visible view and relevant interaction. Character-free ads give reasoned N/A for those
 checks and still test product/place/style. Independent QC compares face/hair, wardrobe cut/colour/
 fabric and accessory sides to the selected masters, and technical quality to the benchmark.
 

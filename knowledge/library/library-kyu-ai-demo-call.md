@@ -1,68 +1,68 @@
-# قدم ديمو لفكرة ( تسويق عن طريق الذكاء الاصطناعي ) وفالك التوفيق 🚀🔥🔥 #كيو #اكسبلور #عروض
+# قدم ديمو لفكرة ( تسويق عن طريق الذكاء الاصطناعي ) وفالك التوفيق 🚀🔥🔥 #كيو #اكسبلور #عروض ("Submit a demo for an idea (marketing through AI) and best of luck to you 🚀🔥🔥 #Kyu #Explore #Offers")
 
-تاريخ البحث: 2026-11-09. مراجعة بصرية لإطارات من ملف الفيديو بمعدل صورة كل ثانية؛ ليست مشاهدة حركة مستمرة أو استماعًا. توقيت صفحات المراجعة تقريبي بفارق نحو نصف ثانية.
+Research date: 2026-11-09. Visual review of frames from the video file at one frame per second; not continuous motion viewing or listening. Timings on the review sheets are approximate, to within about half a second.
 
 ## 1. CARD
 
-المصدر: [محمد عمر | كيو](https://www.youtube.com/watch?v=J2SDzhHjICI). تاريخ النشر بحسب بيانات يوتيوب: 20261101. المدة: 46 ثانية. المنصة: YouTube. القطاع: تجزئة / محتوى قناة العلامة. صفة الإعلان المدفوع غير مثبتة. الأداء النسبي والاحتفاظ: غير متاحين.
+Source: [محمد عمر | كيو](https://www.youtube.com/watch?v=J2SDzhHjICI) ("Mohammed Omar | Kyu"). Publish date per YouTube metadata: 20261101. Duration: 46 seconds. Platform: YouTube. Sector: retail / brand channel content. Paid-ad status not confirmed. Relative performance and retention: not available.
 
-الأدلة المحلية: `work/research/2026-11-09-youtube/J2SDzhHjICI/source.mp4`، `source.info.json`، `frames/`، `review-*.jpg`، `source-audio.m4a`. [LIB:library-kyu-ai-demo-call.md#card]
+Local evidence: `work/research/2026-11-09-youtube/J2SDzhHjICI/source.mp4`, `source.info.json`, `frames/`, `review-*.jpg`, `source-audio.m4a`. [LIB:library-kyu-ai-demo-call.md#card]
 
 ## 2. THE IDEA IN ONE SENTENCE
 
-طلب إبداعي يُقدّم في مكان يبدو فاخرًا، تُقحَم فيه شخصيات معروفة، ثم يُكشَف مكان بسيط في النهاية.
+A creative call-out presented in a place that looks luxurious, with well-known figures inserted into it, and then a simple place is revealed at the end.
 
 ## 3. HOOK (0–3 s)
 
-مقدم بثوب أبيض أمام نوافذ مرتفعة ونص يعد بمشروع تقني كبير؛ H05 أساسي وH04 ثانوي. الصورة والكلمات المكتوبة تحملان الفضول. الصوت لم يُفحص.
+A presenter in a white thobe in front of tall windows, with text promising a big tech project; H05 primary and H04 secondary. The image and the on-screen words carry the curiosity. Audio not examined.
 
 ## 4. TIME STRUCTURE
 
-0–10: مقدّم ومشهد مكتب مرتفع؛ 11–14: ظهور شخصيتين تحملان لوحات؛ 15–24: كلام للعدسة وتفاعل مركّب مع شخصية رياضية؛ 25–39: طلب ديمو وذكر التسويق والذكاء الاصطناعي في النص؛ 40–46: انتقال إلى غرفة بسيطة ومكتب وكرسي فارغ.
+0–10: presenter and a high-rise office scene; 11–14: two figures appear holding boards; 15–24: talking to the lens and a composited interaction with a sports figure; 25–39: a request for a demo, with marketing and AI mentioned in the text; 40–46: a cut to a simple room, a desk and an empty chair.
 
 ## 5. STRATEGY
 
-[ASSUMPTION] جذب صنّاع المحتوى بإظهار مثال لما يطلبه. يُستخدم كقرينة على السياق الإبداعي؛ لا يغني عن موجز العميل وشروط التكليف.
+[ASSUMPTION] Attracting content creators by showing an example of what it is asking for. Used as an indicator of the creative context; it does not replace the client brief and the commissioning terms.
 
 ## 6. CHARACTERS
 
-المقدم مع شخصيات ظاهرة مركّبة. لا تعتمد هذه اللقطات لإثبات ملامح حقيقية أو موقع مكتب حقيقي؛ الاستنتاج البصري: هناك انتقال يصنع مفارقة بين مكانين.
+The presenter with visibly composited figures. These shots are not used to establish real features or the location of a real office; the visual inference: there is a transition that creates an ironic contrast between two places.
 
 ## 7. CREATIVE MECHANISM
 
-وعد بصري ثم إزالة الوهم في الخاتمة. لا نقرر التقنية الدقيقة المستخدمة من الصورة وحدها.
+A visual promise, then the illusion is removed at the end. We do not decide the exact technique used from the image alone.
 
 ## 8. COMEDY AND EMOTION
 
-المفارقة بين البيئة الفاخرة والغرفة البسيطة. [ASSUMPTION] النهاية تعيد تأويل ما سبق وتُظهر إمكانات التركيب.
+The irony between the luxurious setting and the simple room. [ASSUMPTION] The ending reframes what came before and shows the possibilities of compositing.
 
 ## 9. CRAFT
 
-9:16؛ لقطات متوسط وكامل؛ ثوب أبيض ونص أبيض مع كلمات صفراء؛ جدران خشبية ونوافذ ثم غرفة بيضاء. تفاصيل الصوت غير متحققة.
+9:16; medium and full shots; white thobe and white text with yellow words; wooden walls and windows, then a white room. Audio details not verified.
 
 ## 10. ENDING AND ENGAGEMENT
 
-الديمو هو الدعوة الأساسية بحسب العنوان والنصوص الظاهرة؛ نهاية الغرفة الفارغة تمثل الكشف.
+The demo is the main call to action according to the title and the visible text; the empty-room ending is the reveal.
 
 ## 11. ASSESSMENT
 
-[ASSUMPTION] عناصر قوة محتملة: طلب محدد؛ مثال بصري؛ كشف أخير. لا نتائج توظيف أو أداء موثقة. الشخصيات المشهورة تعيق النقل إلى ضوابط المشروع.
+[ASSUMPTION] Possible strengths: a specific request; a visual example; a final reveal. No documented hiring or performance results. The famous figures hinder transfer to the project's constraints.
 
 ## 12. WHAT TRANSFERS
 
-بدل شرح القدرة، اعرض مثالًا قصيرًا ثم اكشف طريقة النظر إليه. لا تنقل ادعاءات ضخامة المشروع أو حقوق الشخصيات.
+Instead of explaining the capability, show a short example, then reveal how to look at it. Do not carry over claims about the project's scale or the figures' rights.
 
 ## 13. AI PRODUCTION FEASIBILITY
 
-التحول بين خلفيتين قابل للاختبار؛ ثبات الهوية والتفاعل المتعدد يحتاجان مراجع محكمة. ليس اختبارًا لملامح محمد عمر أو لمزامنة صوته.
+The switch between two backgrounds is testable; identity consistency and multi-person interaction need tightly controlled references. Not a test of Mohammed Omar's features or of syncing his voice.
 
 ## 14. COMPLIANCE
 
-C1/C2: ظهور شخوص معروفة ومركبة؛ يُحفظ مرجع سرد فقط ويُستبعد من مصدر هوية الشخصية.
+C1/C2: appearance of well-known and composited people; kept as a narrative reference only and excluded as a source for the character's identity.
 
 ### HANDOFF
-- Stage completed: إدخال مرجع بحثي؛ لا PASS إنتاجي.
+- Stage completed: research reference intake; no production PASS.
 - Output file(s) written: `knowledge/library/library-kyu-ai-demo-call.md`.
-- Next agent and what they need from this output: الباحث/الكاتب/مدير التصوير؛ الرجوع للصور المؤقتة وربط أي اقتباس بالمصدر.
-- Open questions for the human (max 3, each with a recommended answer): لا سؤال مطلوب لاستعمال التحليل الداخلي؛ اعتماد العروض والحقوق منفصل قبل الإنتاج.
-- Decision log lines added: DL-008 (قرار مشترك لحزمة البحث).
+- Next agent and what they need from this output: researcher/writer/director of photography; refer back to the temporary images and link any quotation to its source.
+- Open questions for the human (max 3, each with a recommended answer): no question needed to use the internal analysis; approval of offers and rights is separate, before production.
+- Decision log lines added: DL-008 (shared decision for the research package).

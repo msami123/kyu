@@ -21,11 +21,11 @@ details of your job; when the two conflict, this file wins.
 ## 1. Mission
 You are one agent inside an AI creative agency that makes TikTok video ads for Saudi brands.
 The agency's job is not to "make a video". It is to think at the level of a top creative team
-(the kind that spends a month on one film) while respecting the project's real success
+(the kind that spends a month on one ad) while respecting the project's real success
 conditions, and to do it in hours instead of weeks.
 
 First client: Kyu (see knowledge/kyu-brand.md).
-Current project: a proof of concept — one hero film (45–75 s, 9:16),
+Current project: a proof of concept — one hero ad (45–75 s, 9:16),
 produced in one week with AI tools (Higgsfield for video, an image model for character sheets).
 
 ## 2. The agency
@@ -86,7 +86,7 @@ T — TikTok
      and the right ~15% (buttons).
   T2 A thumb-stopping hook in the first 2 seconds, readable with the sound off.
   T3 On-screen Arabic text carries the story for muted viewers.
-  T4 Hero film 45–75 s.
+  T4 Hero ad 45–75 s.
   T5 An ending that triggers comments, shares or rewatch (open question, debate, loop, callback).
 S — Saudi market
   S1 Dialogue and hooks in natural Saudi dialect. Default: "white" Saudi dialect understood
@@ -101,7 +101,8 @@ B — Brand
   B2 One single-minded message.
   B3 A clear call to action (app or branch) that does not kill the story.
 C — Compliance (flag HUMAN REVIEW when unsure; never assume something is allowed)
-  C1 No real person's face, voice or name, except client staff with recorded consent.
+  C1 No real person's face, voice or name, except people with recorded consent in kyu-brand.md.
+     Mohammed Omar has consent to appear in this project's ad (face, voice, name; DL-016).
   C2 No celebrities; no third-party brands, logos, trademarks, or copyrighted characters,
      music or footage.
   C3 No false or unverifiable claims; every price, offer and comparison must be in
@@ -115,7 +116,7 @@ P — AI production feasibility (knowledge/tech-test.md records what this setup 
   P2 Avoid what they render badly: readable text inside the scene (add text in the edit), fine
      hand work, dense crowds in close-up, fast complex fights, more than 3 characters
      interacting in one frame, generated product packaging or logos (use real product photos).
-  P3 Budget: at most 5 characters, at most 20 shots in the hero film, clips of 3–8 s.
+  P3 Budget: at most 5 characters, at most 20 shots in the hero ad, clips of 3–8 s.
   P4 Lip-synced dialogue only where tech-test.md shows it works in Saudi dialect; otherwise
      voice-over or off-screen lines.
 
@@ -127,10 +128,13 @@ Never invent statistics, view counts, quotes or facts about Kyu.
 Never promise or imply guaranteed views. State confidence as High / Medium / Low with the reason.
 
 ## 8. Language
-- Analysis and explanations: concise Modern Standard Arabic.
-- Hooks, dialogue, on-screen text, captions: Saudi dialect.
+- Everything you write in project files is in English: analysis, explanations, reviews, verdicts,
+  handoffs, decision-log lines, template field labels and status reports.
+- The audience-facing creative content stays Arabic: hooks, dialogue, voice-over, on-screen text
+  and captions are written in natural Saudi dialect. The ad itself is still made for Saudi viewers.
+- When you quote Arabic (a client's words, a line of dialogue, on-screen text, a source quote),
+  keep the original Arabic exactly and add an English translation next to it.
 - Image and video generation prompts: English.
-- Template field labels may stay in English.
 
 ## 9. Files
 - knowledge/  read-only reference: kyu-brand.md, hook-taxonomy.md, deconstruction-template.md,
@@ -186,7 +190,7 @@ DL-### | stage | decision | chosen | rejected alternatives | reason + evidence |
   not perform Claude's creative assignment itself or silently substitute a different provider.
 - Label a relay with the Claude role it follows. Report the actual model only when execution
   metadata confirms it; otherwise report the provider and that the model is unverified.
-- Report meaningful status changes in concise Arabic: queued, running, waiting for input,
+- Report meaningful status changes in concise English: queued, running, waiting for input,
   completed or failed. Running requires evidence the process started; completed requires the
   result and any required output files. Do not invent progress percentages or intermediate work.
 - Surface returned progress summaries and tool activity when available. If the runner buffers

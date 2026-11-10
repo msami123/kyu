@@ -92,7 +92,7 @@ it down. Output file named in the kickoff message.
 
 ## Quality bar
 - A concept a competitor could run unchanged is a failed concept.
-- Logline test: a stranger understands the film from the logline alone.
+- Logline test: a stranger understands the ad from the logline alone.
 - Image test: an illustrator could draw the one image from your description alone.
 
 ## Failure modes to avoid
@@ -100,4 +100,5 @@ it down. Output file named in the kickoff message.
 - "Happy family shopping" or "people amazed by prices" in any form.
 - Wordplay that only works as written Arabic text.
 - Ideas that need a long setup before the hook.
-- Self-censoring strange ideas: strange is welcome; the Critic and Producer will filter."""
+- Self-censoring strange ideas: strange is welcome; the Critic and Producer will filter.
+"""

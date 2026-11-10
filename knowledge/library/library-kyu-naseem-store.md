@@ -1,68 +1,68 @@
-# كيو فرع النسيم اقرب من اي وقت مضى 🔥🔥 #كيو #عروض #اكسبلور
+# كيو فرع النسيم اقرب من اي وقت مضى 🔥🔥 #كيو #عروض #اكسبلور ("Kyu Al-Naseem branch, closer than ever 🔥🔥 #Kyu #Offers #Explore")
 
-تاريخ البحث: 2026-11-09. مراجعة بصرية لإطارات من ملف الفيديو بمعدل صورة كل ثانية؛ ليست مشاهدة حركة مستمرة أو استماعًا. توقيت صفحات المراجعة تقريبي بفارق نحو نصف ثانية.
+Research date: 2026-11-09. Visual review of frames from the video file at one frame per second; not continuous motion viewing or listening. Timings on the review sheets are approximate, to within about half a second.
 
 ## 1. CARD
 
-المصدر: [محمد عمر | كيو](https://www.youtube.com/watch?v=SrwM-Nayr7w). تاريخ النشر بحسب بيانات يوتيوب: 20261012. المدة: 64 ثانية. المنصة: YouTube. القطاع: تجزئة / محتوى قناة العلامة. صفة الإعلان المدفوع غير مثبتة. الأداء النسبي والاحتفاظ: غير متاحين.
+Source: [محمد عمر | كيو](https://www.youtube.com/watch?v=SrwM-Nayr7w) ("Mohammed Omar | Kyu"). Publish date per YouTube metadata: 20261012. Duration: 64 seconds. Platform: YouTube. Sector: retail / brand channel content. Paid-ad status not confirmed. Relative performance and retention: not available.
 
-الأدلة المحلية: `work/research/2026-11-09-youtube/SrwM-Nayr7w/source.mp4`، `source.info.json`، `frames/`، `review-*.jpg`، `source-audio.m4a`. [LIB:library-kyu-naseem-store.md#card]
+Local evidence: `work/research/2026-11-09-youtube/SrwM-Nayr7w/source.mp4`, `source.info.json`, `frames/`, `review-*.jpg`, `source-audio.m4a`. [LIB:library-kyu-naseem-store.md#card]
 
 ## 2. THE IDEA IN ONE SENTENCE
 
-جولة بين أقسام فرع تحت التجهيز تعرض التصميم والوظائف المقبلة للمكان.
+A tour through the sections of a branch under fit-out, showing the design and the upcoming functions of the space.
 
 ## 3. HOOK (0–3 s)
 
-سقف وتجهيزات ثم قسم بألوان قوية؛ عنوان الفرع ظاهر؛ H11 أساسي وH04 ثانوي. المشاهد داخل جولة يقودها التصوير.
+Ceiling and fixtures, then a section in bold colors; the branch name is visible; H11 primary and H04 secondary. The viewer is inside a tour led by the camera.
 
 ## 4. TIME STRUCTURE
 
-0–12: مستوردات ورفوف وردية وتركواز؛ 13–28: الأسماك ومناطق الخدمة؛ 29–34: Q FIT؛ 35–41: Q GREEK ومقاطع توضيحية؛ 42–54: ثلاجات ومخبوزات وأفران؛ 55–64: مساحة تحضير ورفوف وتجهيزات.
+0–12: imports, pink and turquoise shelves; 13–28: fish and service areas; 29–34: Q FIT; 35–41: Q GREEK and explanatory clips; 42–54: fridges, baked goods and ovens; 55–64: prep area, shelves and fixtures.
 
 ## 5. STRATEGY
 
-[ASSUMPTION] بناء ترقب الافتتاح وإظهار تنوع الأقسام. تاريخ التصوير ليس تاريخ افتتاح، ولا يدل على الوضع الحالي.
+[ASSUMPTION] Building anticipation for the opening and showing the variety of sections. The filming date is not the opening date and does not indicate the current state.
 
 ## 6. CHARACTERS
 
-مقدم بنظارات وقميص مخطط، وأشخاص في لقطات توضيحية. لا يخلط مع مقدم المقطع الأساسي، ولا تُستنتج أسماؤهم.
+A presenter with glasses and a striped shirt, and people in explanatory shots. Not to be confused with the main video's presenter, and their names are not inferred.
 
 ## 7. CREATIVE MECHANISM
 
-جولة من منظور المشاهد مع انتقالات مكانية وأقسام ذات ألوان مختلفة، تتخللها أمثلة بصرية.
+A tour from the viewer's point of view with spatial transitions and sections in different colors, interspersed with visual examples.
 
 ## 8. COMEDY AND EMOTION
 
-الفضول حول شكل المحل القادم، مع إدراج قصير لشخصية/ميم عند نحو 7 ثوانٍ؛ مرجع غير قابل لإعادة استعماله كما هو.
+Curiosity about what the upcoming store will look like, with a short insert of a character/meme at around 7 seconds; a reference that cannot be reused as is.
 
 ## 9. CRAFT
 
-9:16؛ تصوير يدوي بميول وتحريك لأعلى وأسفل؛ سقف مكشوف؛ طلاء وردي وتركواز؛ لافتات عربية وإنجليزية؛ أسطح معدنية وتجهيزات مغطاة. الصوت غير مفحوص.
+9:16; handheld footage with tilts and up-and-down movement; exposed ceiling; pink and turquoise paint; Arabic and English signage; metal surfaces and covered fixtures. Audio not examined.
 
 ## 10. ENDING AND ENGAGEMENT
 
-تنتهي الجولة في منطقة رفوف وتجهيزات؛ العنوان يؤكد الاقتراب من الافتتاح لا حدوثه.
+The tour ends in an area of shelves and fixtures; the title asserts that the opening is approaching, not that it has happened.
 
 ## 11. ASSESSMENT
 
-[ASSUMPTION] عناصر قوة محتملة: كشف تدريجي؛ ملمس المكان؛ اختلاف الأقسام. الضعف: لقطات تركيب وتجهيز قد تُفهم خطأ على أنها حالة تشغيل حالية.
+[ASSUMPTION] Possible strengths: gradual reveal; texture of the space; contrast between sections. Weakness: installation and fit-out shots could be misread as the current operating state.
 
 ## 12. WHAT TRANSFERS
 
-حوّل المكان إلى مسار اكتشاف؛ لكل محطة لون وفعل واضح. لا تستعمل صور الإنشاء كإثبات لافتتاح الفرع أو تصميمه النهائي.
+Turn the space into a path of discovery; each stop has its own color and a clear action. Do not use construction footage as proof of the branch opening or of its final design.
 
 ## 13. AI PRODUCTION FEASIBILITY
 
-يمكن استخدام أقسام محدودة كمرجع مكان؛ يلزم تصوير حديث وزوايا أمام/خلف وتخطيط لاستمرارية الحركة قبل الإنتاج.
+A limited number of sections can be used as a location reference; recent footage, front/back angles and planning for movement continuity are required before production.
 
 ## 14. COMPLIANCE
 
-C2: علامات ومقاطع إدراج. C3: لا اعتماد موعد افتتاح أو أسعار أو مواقع فروع من هذه الجولة وحدها.
+C2: brands and inserted clips. C3: do not rely on an opening date, prices or branch locations from this tour alone.
 
 ### HANDOFF
-- Stage completed: إدخال مرجع بحثي؛ لا PASS إنتاجي.
+- Stage completed: research reference intake; no production PASS.
 - Output file(s) written: `knowledge/library/library-kyu-naseem-store.md`.
-- Next agent and what they need from this output: الباحث/الكاتب/مدير التصوير؛ الرجوع للصور المؤقتة وربط أي اقتباس بالمصدر.
-- Open questions for the human (max 3, each with a recommended answer): لا سؤال مطلوب لاستعمال التحليل الداخلي؛ اعتماد العروض والحقوق منفصل قبل الإنتاج.
-- Decision log lines added: DL-008 (قرار مشترك لحزمة البحث).
+- Next agent and what they need from this output: researcher/writer/director of photography; refer back to the temporary images and link any quotation to its source.
+- Open questions for the human (max 3, each with a recommended answer): no question needed to use the internal analysis; approval of offers and rights is separate, before production.
+- Decision log lines added: DL-008 (shared decision for the research package).
